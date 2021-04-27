@@ -130,7 +130,13 @@
                     }
                 }
                 .cards-container{
+                    display: flex;
+                    justify-content: space-between;
                     .card{
+                        width: calc((100% - 60px) / 4);
+                        border-radius: 10px;
+                        border: 1.5px solid $border-light-gray;
+                        padding: $small-space;
                         .card-icon{
                             @include light-buttons-icons;
                             @include center-icon;
@@ -141,6 +147,9 @@
                             i{
                                 font-size: $bigger-font;
                             }
+                        }
+                        h3,p{
+                            margin: $small-space 0;
                         }
                     }
                 }

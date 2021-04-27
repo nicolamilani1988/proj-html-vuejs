@@ -126,6 +126,16 @@
 #home-page main #features .container .title > * {
   margin: 20px 0;
 }
+#home-page main #features .container .cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+#home-page main #features .container .cards-container .card {
+  width: calc((100% - 60px) / 4);
+  border-radius: 10px;
+  border: 1.5px solid #E9ECEF;
+  padding: 20px;
+}
 #home-page main #features .container .cards-container .card .card-icon {
   color: #2F55D4;
   background-color: #2F55D41A;
@@ -140,6 +150,9 @@
 #home-page main #features .container .cards-container .card .card-icon i {
   font-size: 1.5rem;
 }
+#home-page main #features .container .cards-container .card h3, #home-page main #features .container .cards-container .card p {
+  margin: 20px 0;
+}
 
 * {
   box-sizing: border-box;
@@ -151,7 +164,7 @@ body {
   font-family: "Nunito", sans-serif;
   color: #8492A6;
 }
-body h1, body h2, body h3 {
+body h1, body h2 {
   color: black;
 }
 body h1 {
@@ -159,6 +172,10 @@ body h1 {
 }
 body h2 {
   font-size: 1.8rem;
+}
+body h3 {
+  color: #3C4858;
+  font-weight: 400;
 }
 body a {
   color: inherit;

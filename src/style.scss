@@ -11,7 +11,7 @@ body{
     font-family: 'Nunito', sans-serif;
     color: $standard-text-grey;
 
-    h1, h2, h3{
+    h1, h2{
         color: $black;
     }
 
@@ -21,6 +21,11 @@ body{
 
     h2{
         font-size: $h2-font;
+    }
+
+    h3{
+        color: $dark-grey;
+        font-weight: 400;
     }
 
     a{
