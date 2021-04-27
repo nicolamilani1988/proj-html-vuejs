@@ -11,7 +11,14 @@ function init() {
   new Vue({
     el: "#home-page",
     data: {
-      menuItems: ['LANDING', 'PAGES', 'DOCS']
+      menuItems: ['LANDING', 'PAGES', 'DOCS'],
+      partners: ['amazon', 'google', 'lenovo', 'paypal', 'shopify', 'spotify']
+    },
+    methods: {
+      getLogo: function getLogo(logo) {
+        var path = 'img/' + logo + '.svg';
+        return path;
+      }
     }
   });
 }

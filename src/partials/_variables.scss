@@ -8,16 +8,15 @@ $xlarge-space: 80px;
 
 
 //colori
-$standard-text: #8492A6;
-$black-text: black;
-$dark-text: #3C4858;
-$blue-text: #007BFF;
-$darkblue-text: #2F55D4;
-// backgrounds
-$bg-lightgrey: #F8F9FC;
-$bg-icons-and-buttons: #2F55D41A;
-//borders
-$bor-light-buttons: #ADB5BD;
+$lighter-grey: #F8F9FC;
+$light-grey: #ADB5BD;
+$standard-text-grey: #8492A6;
+$black: black;
+$dark-grey: #3C4858;
+$blue: #007BFF;
+$dark-blue: #2F55D4;
+// bordered
+$bordered-lightgray-buttons: #2F55D41A;
 //box shadows
 $box-shadow: 0 3px 5px 0 rgb(47,85,212,0.3);
 
@@ -30,8 +29,8 @@ $h1-font: 2.5rem;
 
 //icone
 @mixin light-buttons-icons{
-    color: $darkblue-text;
-    background-color: $bg-icons-and-buttons;
+    color: $dark-blue;
+    background-color: $bordered-lightgray-buttons;
 }
 
 @mixin center-icon{
@@ -44,13 +43,13 @@ $h1-font: 2.5rem;
 //bottoni
 @mixin rounded-buttons{
     border-radius: 20px;
-    border: 1px solid $bor-light-buttons;
+    border: 1px solid $light-grey;
 }
 
 @mixin squared-button{
     border-radius: 5px;
     padding: $xsmall-space $small-space;
-    border: 1px solid $darkblue-text;
+    border: 1px solid $dark-blue;
     box-shadow: $box-shadow;
 }
 

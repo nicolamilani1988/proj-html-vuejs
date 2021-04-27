@@ -1,6 +1,6 @@
 #home-page{
     .container{
-        max-width: 1200px;
+        max-width: 1140px;
         margin: auto;
         display: flex;
         //debug
@@ -9,21 +9,23 @@
 
     .squared-button{
         @include squared-button;
+        cursor: pointer;
     }
 
-    .squared-button.blue{
-        color: $bg-lightgrey;
-        background-color: $darkblue-text;
+    .squared-button.blue, .squared-button.clear:hover{
+        color: $lighter-grey;
+        background-color: $dark-blue;
     }
 
     .squared-button.clear{
-        background-color: $bg-lightgrey;
-        color: $darkblue-text;
+        background-color: $lighter-grey;
+        color: $dark-blue;
     }
 
     header{
         padding: $small-space 0;
-        background-color: $bg-lightgrey;
+        background-color: $lighter-grey;
+        border-bottom: 1px solid $lighter-grey;
         position: fixed;
         top: 0;
         right: 0;
@@ -45,9 +47,9 @@
             nav{
                 .list-item{
                     margin: 0 $small-space;
-                    color: $dark-text;
+                    color: $dark-grey;
                     :hover{
-                        color: $darkblue-text;
+                        color: $dark-blue;
                     }
                 }
             }
@@ -66,9 +68,9 @@
                     box-shadow:$box-shadow;
                 }
                 .action-icon.tool:hover{
-                    background-color: $darkblue-text;
+                    background-color: $dark-blue;
                     i{
-                        color: $bg-lightgrey;
+                        color: $lighter-grey;
                     }
                 }
             }
@@ -76,7 +78,7 @@
     }
 
     #jumbotron{
-        background-color: $bg-lightgrey;
+        background-color: $lighter-grey;
         margin-top: 80px;
         padding: $xlarge-space 0;
         .title{
@@ -103,7 +105,16 @@
     }
 
     #partners{
+        background-color: $lighter-grey;
         padding: $large-space 0;
-        
+        border-radius: 0 0 100% 100%;
+        .container{
+            justify-content: space-around;
+        }
+        .partner{
+            display: flex;
+            align-items: center;
+            width: 80px;
+        }
     }
 }

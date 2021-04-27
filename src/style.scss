@@ -9,10 +9,10 @@
 
 body{
     font-family: 'Nunito', sans-serif;
-    color: $standard-text;
+    color: $standard-text-grey;
 
     h1, h2, h3{
-        color:black;
+        color: $black;
     }
 
     h1{
@@ -38,7 +38,7 @@ body{
     }
 
     div.separation-line{
-        border-top: 1px solid $bor-light-buttons;
+        border-top: 1px solid $light-grey;
     }
 
 }

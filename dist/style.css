@@ -1,5 +1,5 @@
 #home-page .container {
-  max-width: 1200px;
+  max-width: 1140px;
   margin: auto;
   display: flex;
   border: 1px solid red;
@@ -9,8 +9,9 @@
   padding: 10px 20px;
   border: 1px solid #2F55D4;
   box-shadow: 0 3px 5px 0 rgba(47, 85, 212, 0.3);
+  cursor: pointer;
 }
-#home-page .squared-button.blue {
+#home-page .squared-button.blue, #home-page .squared-button.clear:hover {
   color: #F8F9FC;
   background-color: #2F55D4;
 }
@@ -21,6 +22,7 @@
 #home-page header {
   padding: 20px 0;
   background-color: #F8F9FC;
+  border-bottom: 1px solid #F8F9FC;
   position: fixed;
   top: 0;
   right: 0;
@@ -99,7 +101,17 @@
   margin-right: 10px;
 }
 #home-page #partners {
+  background-color: #F8F9FC;
   padding: 50px 0;
+  border-radius: 0 0 100% 100%;
+}
+#home-page #partners .container {
+  justify-content: space-around;
+}
+#home-page #partners .partner {
+  display: flex;
+  align-items: center;
+  width: 80px;
 }
 
 * {

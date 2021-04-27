@@ -93,9 +93,9 @@
         <!-- partners VUEJS -->
         <section id="partners">
             <div class="container">
-                <div>
-                    <img src="" alt="">
-                </div> 
+                <div class="partner" v-for="logo in partners">
+                    <img :src="getLogo(logo)" alt="">
+                </div>
             </div> 
         </section>
 
