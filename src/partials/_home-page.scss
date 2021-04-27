@@ -126,7 +126,22 @@
                 .title{
                     width: 50%;
                     >*{
-                       margin: $small-space; 
+                       margin: $small-space 0; 
+                    }
+                }
+                .cards-container{
+                    .card{
+                        .card-icon{
+                            @include light-buttons-icons;
+                            @include center-icon;
+                            padding: $small-space;
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 10px;
+                            i{
+                                font-size: $bigger-font;
+                            }
+                        }
                     }
                 }
             }

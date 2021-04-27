@@ -110,20 +110,23 @@
                         <p>Start working with <span class="blue-text"><strong>Landrick</strong></span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
                     </div>
                     <!-- 4 cards -->
-                    <div class="cards">
-                        <!-- prima carta -->
-                        <div>
-                            <img src="" alt="">
+                    <div class="cards-container">
+                        <div class="card" v-for="card in cards">
+                            <!-- prima carta -->
+                            <div class="card-icon">
+                                <i :class="card['class']"></i>
+                            </div>
+                            <div>
+                                <h3>{{card['title']}}</h3>
+                                <p>Composed in a pseudo-Latin language which more or less corresponds.</p>
+                            </div>
+                            <div>
+                                <a href="" class="blue-text">Read More<i class="fas fa-chevron-right"></i></a>
+                            </div>
                         </div>
-                        <div>
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div>
-                            <a href=""></a>
-                        </div>
+                        <!-- ... -->     
                     </div>
-                    <!-- ... -->                    
+                                   
                 </div>
                     
             </section>

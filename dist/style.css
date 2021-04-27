@@ -124,7 +124,21 @@
   width: 50%;
 }
 #home-page main #features .container .title > * {
-  margin: 20px;
+  margin: 20px 0;
+}
+#home-page main #features .container .cards-container .card .card-icon {
+  color: #2F55D4;
+  background-color: #2F55D41A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+#home-page main #features .container .cards-container .card .card-icon i {
+  font-size: 1.5rem;
 }
 
 * {
