@@ -29,19 +29,33 @@
         <header>
             <div class="container">
                 <!-- logo -->
-                <div>
-                    <img src="" alt="">
+                <div class="img-container">
+                    <img src="img/logo-dark.png" alt="">
                 </div>
                 <!-- navbar  VUEJS--> 
                 <nav>
                     <ul>
-                        <li></li>
+                        <li class="list-item"><a href=""><strong>HOME</strong></a></li>
+                        <li class="list-item" v-for="item in menuItems">
+                            <a href=""><strong>{{item}} <i class="fas fa-chevron-down"></i></strong></a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- actions VUEJS  -->
-                <div>
+                <div class="actions">
                     <ul>
-                        <li></li>
+                        <li class="action-icon search">
+                            <i class="fas fa-search"></i>
+                        </li>
+                        <li class="action-icon tool">
+                            <i class="fab fa-github"></i>  
+                        </li>
+                        <li class="action-icon tool">
+                            <i class="fab fa-stack-overflow"></i>
+                        </li>
+                        <li class="action-icon tool">
+                            <i class="far fa-user"></i>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -237,9 +251,10 @@
                     </ul>
                 </div>
             </section>
+
         </footer>
-    </div>
-        
+
+    </div>     
     
 </body>
 </html>

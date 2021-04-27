@@ -1,0 +1,59 @@
+#home-page{
+    .container{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+    }
+
+    header{
+        padding: $small-space 0;
+        background-color: $bg-lightgrey;
+        .container{
+            justify-content: space-between;
+            align-items: center;
+            .img-container{
+                width: 15%;
+                img{
+                    width: 100%;
+                }
+            }
+            ul{
+                display: flex;
+            }
+            nav{
+                .list-item{
+                    margin: 0 $small-space;
+                    color: $dark-text;
+                    :hover{
+                        color: $darkblue-text;
+                    }
+                }
+            }
+            .actions{
+                .action-icon{
+                    padding: $xxsmall-space;
+                    width: $normal-space;
+                    height: $normal-space;
+                    margin: 0 $xxsmall-space;
+                    cursor: pointer;
+                    @include center-icon;
+                }
+                .action-icon.tool{
+                    @include square-icon;
+                    box-shadow:0 3px 5px 0 rgb(47,85,212,0.3);
+
+                }
+                .action-icon.tool:hover{
+                    background-color: $darkblue-text;
+                    i{
+                        color: $bg-lightgrey;
+                    }
+                }
+                
+            }
+                
+            
+        }
+        
+    }
+}

@@ -1,1 +1,72 @@
+#home-page .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+#home-page header {
+  padding: 20px 0;
+  background-color: #F8F9FC;
+}
+#home-page header .container {
+  justify-content: space-between;
+  align-items: center;
+}
+#home-page header .container .img-container {
+  width: 15%;
+}
+#home-page header .container .img-container img {
+  width: 100%;
+}
+#home-page header .container ul {
+  display: flex;
+}
+#home-page header .container nav .list-item {
+  margin: 0 20px;
+  color: #3C4858;
+}
+#home-page header .container nav .list-item :hover {
+  color: #2F55D4;
+}
+#home-page header .container .actions .action-icon {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home-page header .container .actions .action-icon.tool {
+  color: #2F55D4;
+  border-radius: 5px;
+  background-color: #2F55D41A;
+  box-shadow: 0 3px 5px 0 rgba(47, 85, 212, 0.3);
+}
+#home-page header .container .actions .action-icon.tool:hover {
+  background-color: #2F55D4;
+}
+#home-page header .container .actions .action-icon.tool:hover i {
+  color: #F8F9FC;
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #8492A6;
+}
+body h1, body h2, body h3 {
+  color: black;
+}
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+body li {
+  list-style-type: none;
+}

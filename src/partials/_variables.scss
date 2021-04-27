@@ -1,0 +1,30 @@
+//spazi
+$xxsmall-space: 5px; 
+$xsmall-space: 10px;
+$small-space: 20px;
+$normal-space: 40px;
+$large-space: 50px;
+$xlarge-space: 80px;
+
+//colori
+$standard-text: #8492A6;
+$black-text: black;
+$dark-text: #3C4858;
+$blue-text: #007BFF;
+$darkblue-text: #2F55D4;
+// backgrounds
+$bg-lightgrey: #F8F9FC;
+$bg-icons-and-buttons: #2F55D41A;
+
+//icone
+@mixin square-icon{
+    color: $darkblue-text;
+    border-radius: 5px;
+    background-color: $bg-icons-and-buttons;
+}
+
+@mixin center-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
