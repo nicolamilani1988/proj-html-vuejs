@@ -2,10 +2,30 @@
   max-width: 1200px;
   margin: auto;
   display: flex;
+  border: 1px solid red;
+}
+#home-page .squared-button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 1px solid #2F55D4;
+  box-shadow: 0 3px 5px 0 rgba(47, 85, 212, 0.3);
+}
+#home-page .squared-button.blue {
+  color: #F8F9FC;
+  background-color: #2F55D4;
+}
+#home-page .squared-button.clear {
+  background-color: #F8F9FC;
+  color: #2F55D4;
 }
 #home-page header {
   padding: 20px 0;
   background-color: #F8F9FC;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 80px;
 }
 #home-page header .container {
   justify-content: space-between;
@@ -39,8 +59,8 @@
 }
 #home-page header .container .actions .action-icon.tool {
   color: #2F55D4;
-  border-radius: 5px;
   background-color: #2F55D41A;
+  border-radius: 5px;
   box-shadow: 0 3px 5px 0 rgba(47, 85, 212, 0.3);
 }
 #home-page header .container .actions .action-icon.tool:hover {
@@ -48,6 +68,38 @@
 }
 #home-page header .container .actions .action-icon.tool:hover i {
   color: #F8F9FC;
+}
+#home-page #jumbotron {
+  background-color: #F8F9FC;
+  margin-top: 80px;
+  padding: 80px 0;
+}
+#home-page #jumbotron .title {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#home-page #jumbotron .title .main-part {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 40px;
+}
+#home-page #jumbotron .title p {
+  margin: 20px 0;
+}
+#home-page #jumbotron .title button.rounded-button {
+  color: #2F55D4;
+  background-color: #2F55D41A;
+  border-radius: 20px;
+  border: 1px solid #ADB5BD;
+  padding: 5px 10px;
+}
+#home-page #jumbotron .title button.squared-button.blue {
+  margin-right: 10px;
+}
+#home-page #partners {
+  padding: 50px 0;
 }
 
 * {
@@ -63,10 +115,22 @@ body {
 body h1, body h2, body h3 {
   color: black;
 }
+body h1 {
+  font-size: 2.5rem;
+}
 body a {
   color: inherit;
   text-decoration: none;
 }
 body li {
   list-style-type: none;
+}
+body .small-text {
+  font-size: 0.7rem;
+}
+body .big-text {
+  font-size: 1.1rem;
+}
+body div.separation-line {
+  border-top: 1px solid #ADB5BD;
 }

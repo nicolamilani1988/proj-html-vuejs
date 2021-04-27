@@ -3,11 +3,33 @@
         max-width: 1200px;
         margin: auto;
         display: flex;
+        //debug
+        border: 1px solid red;
+    }
+
+    .squared-button{
+        @include squared-button;
+    }
+
+    .squared-button.blue{
+        color: $bg-lightgrey;
+        background-color: $darkblue-text;
+    }
+
+    .squared-button.clear{
+        background-color: $bg-lightgrey;
+        color: $darkblue-text;
     }
 
     header{
         padding: $small-space 0;
         background-color: $bg-lightgrey;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 80px;
+        
         .container{
             justify-content: space-between;
             align-items: center;
@@ -39,9 +61,9 @@
                     @include center-icon;
                 }
                 .action-icon.tool{
-                    @include square-icon;
-                    box-shadow:0 3px 5px 0 rgb(47,85,212,0.3);
-
+                    @include light-buttons-icons;
+                    border-radius: 5px;
+                    box-shadow:$box-shadow;
                 }
                 .action-icon.tool:hover{
                     background-color: $darkblue-text;
@@ -49,11 +71,39 @@
                         color: $bg-lightgrey;
                     }
                 }
-                
             }
-                
-            
         }
+    }
+
+    #jumbotron{
+        background-color: $bg-lightgrey;
+        margin-top: 80px;
+        padding: $xlarge-space 0;
+        .title{
+            width: 50%;
+            @include flex-vertical;
+            justify-content: center;
+            .main-part{
+                margin-top: $small-space;
+                margin-bottom: $small-space;
+                margin-right: $normal-space;
+            }
+            p{
+                margin: $small-space 0;
+            }    
+            button.rounded-button{
+                @include light-buttons-icons;
+                @include rounded-buttons;
+                padding: $xxsmall-space $xsmall-space;
+            }
+            button.squared-button.blue{
+                margin-right: $xsmall-space;
+            }
+        }
+    }
+
+    #partners{
+        padding: $large-space 0;
         
     }
 }
