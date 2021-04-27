@@ -114,7 +114,7 @@
   width: 80px;
 }
 #home-page main {
-  padding: 100px;
+  padding: 100px 0;
 }
 #home-page main #features .container {
   display: flex;
@@ -123,10 +123,11 @@
 #home-page main #features .container .title {
   width: 50%;
 }
-#home-page main #features .container .title > * {
-  margin: 20px 0;
+#home-page main #features .container .title > p {
+  padding: 20px 0;
 }
 #home-page main #features .container .cards-container {
+  padding: 40px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -152,6 +153,59 @@
 }
 #home-page main #features .container .cards-container .card h3, #home-page main #features .container .cards-container .card p {
   margin: 20px 0;
+}
+#home-page main #quickstart {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  align-items: center;
+}
+#home-page main #quickstart .title {
+  text-align: center;
+  width: 40%;
+}
+#home-page main #quickstart .title > h2, #home-page main #quickstart .title p {
+  padding: 10px 0;
+}
+#home-page main #quickstart .mini-container {
+  width: 50%;
+}
+#home-page main #quickstart .mini-container .grey-container {
+  background-color: #3C4858;
+  padding: 20px;
+  border-radius: 5px;
+}
+#home-page main #quickstart .mini-container .grey-container h3 {
+  color: white;
+}
+#home-page main #quickstart .mini-container .grey-container ul {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #8492A6;
+  border-radius: 5px;
+  background-color: #4F5A69;
+}
+#home-page main #quickstart .mini-container .grey-container ul li {
+  width: 25%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 0;
+}
+#home-page main #quickstart .mini-container .grey-container ul li.active {
+  background-color: #3C4858;
+}
+#home-page main #quickstart .mini-container .grey-container .tips > p {
+  padding: 20px 0 10px;
+}
+#home-page main #quickstart .mini-container .didascalic {
+  padding: 20px 0;
+}
+#home-page main #quickstart .mini-container .didascalic span {
+  margin-right: 40px;
+}
+#home-page main #quickstart .mini-container .didascalic span i {
+  margin-right: 10px;
+  color: #2ECA8B;
 }
 
 * {
@@ -190,8 +244,14 @@ body .small-text {
 body .big-text {
   font-size: 1.1rem;
 }
+body .bigger-text {
+  font-size: 1.5rem;
+}
 body .blue-text {
   color: #2F55D4;
+}
+body .green-text {
+  color: #2ECA8B;
 }
 body div.separation-line {
   border-top: 1px solid #ADB5BD;

@@ -119,17 +119,18 @@
     }
 
     main{
-        padding: $xxlarge-space;
+        padding: $xxlarge-space 0;
         #features{
             .container{
                 @include flex-vertical;  
                 .title{
                     width: 50%;
-                    >*{
-                       margin: $small-space 0; 
+                    >p{
+                       padding: $small-space 0; 
                     }
                 }
                 .cards-container{
+                    padding: $normal-space 0;
                     display: flex;
                     justify-content: space-between;
                     .card{
@@ -153,6 +154,62 @@
                         }
                     }
                 }
+            }
+        }
+
+        #quickstart{
+            @include flex-vertical;
+            padding: $large-space 0;
+            align-items: center;
+            .title{
+                text-align: center;
+                width: 40%;
+                >h2,p{
+                    padding: $xsmall-space 0;
+                }
+            }
+            .mini-container{
+                width: 50%;
+                .grey-container{
+                    background-color: $dark-grey;
+                    padding: $small-space;
+                    border-radius: 5px;
+                    h3{
+                        color: white;
+                    }
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        border: 1px solid $standard-text-grey;
+                        border-radius: 5px;
+                        background-color: $mouse-grey;
+                        li{
+                            width: 25%;
+                            border-radius: 10px;
+                            text-align: center;
+                            padding: $xsmall-space 0;                      
+                        }
+                        li.active{
+                            background-color: $dark-grey;
+                        } //da completare con VUEJS
+                    }
+                    .tips{
+                        >p{
+                            padding: $small-space 0 $xsmall-space;
+                        }
+                    }
+                }
+                .didascalic{
+                    padding: $small-space 0;
+                    span{
+                        margin-right: $normal-space;
+                        i{
+                            margin-right: $xsmall-space;
+                            color: $acid-green;
+                        }
+                    }
+                }
+                
             }
         }
     }

@@ -45,8 +45,16 @@ body{
         font-size: $big-font;
     }
 
+    .bigger-text{
+        font-size: $bigger-font;
+    }
+
     .blue-text{
         color: $dark-blue;
+    }
+
+    .green-text{
+        color: $acid-green;
     }
 
     div.separation-line{

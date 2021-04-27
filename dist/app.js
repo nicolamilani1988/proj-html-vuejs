@@ -25,7 +25,8 @@ function init() {
       }, {
         "class": "fas fa-expand-arrows-alt",
         title: "Scalable"
-      }]
+      }],
+      startItems: ['npm', 'nuget', 'spm', 'github']
     },
     methods: {
       getLogo: function getLogo(logo) {
