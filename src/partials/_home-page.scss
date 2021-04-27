@@ -117,4 +117,19 @@
             width: 80px;
         }
     }
+
+    main{
+        padding: $xxlarge-space;
+        #features{
+            .container{
+                @include flex-vertical;  
+                .title{
+                    width: 50%;
+                    >*{
+                       margin: $small-space; 
+                    }
+                }
+            }
+        }
+    }
 }

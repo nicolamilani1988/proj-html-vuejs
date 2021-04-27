@@ -16,8 +16,11 @@ body{
     }
 
     h1{
-        font-size: $h1-font;
-        
+        font-size: $h1-font;    
+    }
+
+    h2{
+        font-size: $h2-font;
     }
 
     a{
@@ -35,6 +38,10 @@ body{
 
     .big-text{
         font-size: $big-font;
+    }
+
+    .blue-text{
+        color: $dark-blue;
     }
 
     div.separation-line{

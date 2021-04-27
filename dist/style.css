@@ -113,6 +113,19 @@
   align-items: center;
   width: 80px;
 }
+#home-page main {
+  padding: 100px;
+}
+#home-page main #features .container {
+  display: flex;
+  flex-direction: column;
+}
+#home-page main #features .container .title {
+  width: 50%;
+}
+#home-page main #features .container .title > * {
+  margin: 20px;
+}
 
 * {
   box-sizing: border-box;
@@ -130,6 +143,9 @@ body h1, body h2, body h3 {
 body h1 {
   font-size: 2.5rem;
 }
+body h2 {
+  font-size: 1.8rem;
+}
 body a {
   color: inherit;
   text-decoration: none;
@@ -142,6 +158,9 @@ body .small-text {
 }
 body .big-text {
   font-size: 1.1rem;
+}
+body .blue-text {
+  color: #2F55D4;
 }
 body div.separation-line {
   border-top: 1px solid #ADB5BD;
