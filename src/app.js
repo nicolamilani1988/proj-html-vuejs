@@ -28,6 +28,7 @@ function init(){
             ],
 
             startItems:['npm','nuget','spm','github'],
+            activeStartItem : 'npm',
 
             strengths:['Digital Marketing Solutions for Tomorrow','Our Talented & Experienced Marketing Agency','Create your own skin to match your brand'],
 
@@ -80,6 +81,10 @@ function init(){
             updateScroll() {
                 this.scrollPosition = window.scrollY;
             },
+            selectItem: function(item){
+                this.activeStartItem = item;
+                console.log(this.activeStartItem);
+            }
         },
         mounted() {
             window.addEventListener('scroll', this.updateScroll);

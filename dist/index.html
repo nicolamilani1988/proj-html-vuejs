@@ -109,6 +109,9 @@
                     <!-- 4 cards -->
                     <div class="cards-container">
                         <div class="card" v-for="card in cards">
+                            <div class="hidden">
+                                <i class="fa-10x" :class="card['class']"></i>
+                            </div>
                             <!-- prima carta -->
                             <div class="card-icon">
                                 <i :class="card['class']"></i>
@@ -140,13 +143,16 @@
                     <!-- grey part -->
                     <div class="grey-container">
                         <ul>
-                            <li class="big-text" v-for="item in startItems">
+                            <li @click="selectItem(item)" class="big-text" v-for="item in startItems" :class="activeStartItem == item ? 'active' : ''">
                                 <h3>{{item}}</h3>
                             </li>
                         </ul>
                         <div class="tips">
-                            <p><strong><span class="green-text">$</span> npm install <span class="green-text">-g</span> claps.js</strong></p>
-                        </div>     
+                            <transition name="fade">
+                                <p key=1 v-if="activeStartItem == 'npm'"><strong><span class="green-text">$</span> npm install <span class="green-text">-g</span> claps.js</strong></p>
+                                <p key=2 v-else><strong>coming soon ...</strong></p>
+                            </transition>
+                        </div>    
                     </div>
                     <!-- didascalic part -->
                     <div class="didascalic">

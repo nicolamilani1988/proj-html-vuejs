@@ -161,25 +161,37 @@
                        padding: $xsmall-space 0; 
                     }
                 }
-                .cards-container{
-                    .card{
-                        width: calc((100% - 60px) / 4);
-                        .card-icon{
-                            @include light-labels-icons;
+                .card{
+                    position: relative;
+                    width: calc((100% - 60px) / 4);
+                    .card-icon{
+                        @include light-labels-icons;
+                        @include center-icon;
+                        padding: $small-space;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 10px;
+                        i{
+                            font-size: $bigger-font;
+                        }
+                    }
+                    h3,p{
+                        margin: $small-space 0;
+                    }
+                    .hidden{
+                        i{
+                            @include absolute-total;
                             @include center-icon;
-                            padding: $small-space;
-                            width: 60px;
-                            height: 60px;
-                            border-radius: 10px;
-                            i{
-                                font-size: $bigger-font;
-                            }
+                            color: $bordered-lightgray-buttons;
+                            opacity: 0;
                         }
-                        h3,p{
-                            margin: $small-space 0;
-                        }
-                        &:hover{
-                            background-color: red;
+                    }
+                    &:hover{
+                        transform: translateY(-10px);
+                        transition: $standard-transition;
+                        .hidden i{
+                            opacity: 0.5;
+                            transition: $standard-transition;
                         }
                     }
                 }
@@ -189,7 +201,8 @@
         #quickstart{
             padding: $large-space 0;
             .mini-container{
-                width: 50%;
+                padding: $normal-space 0;
+                width: 40%;
                 margin: auto;
                 .grey-container{
                     background-color: $dark-grey;
@@ -213,7 +226,8 @@
                         }
                         li.active{
                             background-color: $dark-grey;
-                        } //da completare con VUEJS
+                            transition: $standard-transition;
+                        }
                     }
                     .tips{
                         >p{
@@ -232,6 +246,7 @@
         }
 
         #build{
+            padding:$normal-space 0;
             .container{
                 justify-content: space-between;
                 >div{
@@ -248,6 +263,12 @@
                         line-height: 30px;
                     }
                 }
+                .squared-button{
+                    &:hover{
+                        background-color: $hover-dark-blue;
+                        transition: $standard-transition;
+                    }
+                }    
             }
         }
 

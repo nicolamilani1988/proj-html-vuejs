@@ -124,3 +124,12 @@ $standard-transition: all .5s ease;
     border: 1.5px solid $border-light-gray;
     padding: $small-space;
 }
+
+//position
+@mixin absolute-total{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+}

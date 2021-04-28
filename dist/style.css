@@ -169,10 +169,11 @@
 #home-page main #features .container .section-title > h2, #home-page main #features .container .section-title p {
   padding: 10px 0;
 }
-#home-page main #features .container .cards-container .card {
+#home-page main #features .container .card {
+  position: relative;
   width: calc((100% - 60px) / 4);
 }
-#home-page main #features .container .cards-container .card .card-icon {
+#home-page main #features .container .card .card-icon {
   color: #2F55D4;
   background-color: #2F55D41A;
   display: flex;
@@ -185,20 +186,40 @@
   height: 60px;
   border-radius: 10px;
 }
-#home-page main #features .container .cards-container .card .card-icon i {
+#home-page main #features .container .card .card-icon i {
   font-size: 1.5rem;
 }
-#home-page main #features .container .cards-container .card h3, #home-page main #features .container .cards-container .card p {
+#home-page main #features .container .card h3, #home-page main #features .container .card p {
   margin: 20px 0;
 }
-#home-page main #features .container .cards-container .card:hover {
-  background-color: red;
+#home-page main #features .container .card .hidden i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #2F55D41A;
+  opacity: 0;
+}
+#home-page main #features .container .card:hover {
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+#home-page main #features .container .card:hover .hidden i {
+  opacity: 0.5;
+  transition: all 0.5s ease;
 }
 #home-page main #quickstart {
   padding: 50px 0;
 }
 #home-page main #quickstart .mini-container {
-  width: 50%;
+  padding: 40px 0;
+  width: 40%;
   margin: auto;
 }
 #home-page main #quickstart .mini-container .grey-container {
@@ -225,6 +246,7 @@
 }
 #home-page main #quickstart .mini-container .grey-container ul li.active {
   background-color: #3C4858;
+  transition: all 0.5s ease;
 }
 #home-page main #quickstart .mini-container .grey-container .tips > p {
   padding: 20px 0 10px;
@@ -234,6 +256,9 @@
 }
 #home-page main #quickstart .mini-container .didascalic span {
   margin-right: 40px;
+}
+#home-page main #build {
+  padding: 40px 0;
 }
 #home-page main #build .container {
   justify-content: space-between;
@@ -249,6 +274,10 @@
 }
 #home-page main #build .container .section-title li {
   line-height: 30px;
+}
+#home-page main #build .container .squared-button:hover {
+  background-color: #2443AC;
+  transition: all 0.5s ease;
 }
 #home-page main #rates {
   padding: 50px 0;
@@ -489,4 +518,11 @@ body .red-text {
 }
 body div.separation-line {
   border-top: 1px solid #ADB5BD;
+}
+body .fade-enter-active {
+  transition: opacity 0.5s;
+}
+body .fade-enter,
+body .fade-leave-to, body .fade-leave-active {
+  opacity: 0;
 }

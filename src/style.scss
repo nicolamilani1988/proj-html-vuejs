@@ -75,4 +75,13 @@ body{
         border-top: 1px solid $light-grey;
     }
 
+    .fade-enter-active {
+        transition: opacity .5s
+    }
+
+    .fade-enter,
+    .fade-leave-to, .fade-leave-active {
+        opacity: 0
+    }
+
 }

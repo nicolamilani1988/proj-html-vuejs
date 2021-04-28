@@ -28,6 +28,7 @@ function init() {
         title: "Scalable"
       }],
       startItems: ['npm', 'nuget', 'spm', 'github'],
+      activeStartItem: 'npm',
       strengths: ['Digital Marketing Solutions for Tomorrow', 'Our Talented & Experienced Marketing Agency', 'Create your own skin to match your brand'],
       memberships: [{
         title: 'Basic',
@@ -67,6 +68,10 @@ function init() {
       },
       updateScroll: function updateScroll() {
         this.scrollPosition = window.scrollY;
+      },
+      selectItem: function selectItem(item) {
+        this.activeStartItem = item;
+        console.log(this.activeStartItem);
       }
     },
     mounted: function mounted() {
