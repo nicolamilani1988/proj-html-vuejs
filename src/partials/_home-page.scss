@@ -22,6 +22,15 @@
         color: $dark-blue;
     }
 
+    .section-title{
+        @include flex-vertical;
+        justify-content: center;
+    }
+
+    i.blue-text, i.green-text{
+        margin-right: $xsmall-space;
+    }
+
     header{
         padding: $small-space 0;
         background-color: $lighter-grey;
@@ -63,7 +72,7 @@
                     @include center-icon;
                 }
                 .action-icon.tool{
-                    @include light-buttons-icons;
+                    @include light-labels-icons;
                     border-radius: 5px;
                     box-shadow:$box-shadow;
                 }
@@ -81,10 +90,8 @@
         background-color: $lighter-grey;
         margin-top: 80px;
         padding: $xlarge-space 0;
-        .title{
+        .section-title{
             width: 50%;
-            @include flex-vertical;
-            justify-content: center;
             .main-part{
                 margin-top: $small-space;
                 margin-bottom: $small-space;
@@ -93,10 +100,10 @@
             p{
                 margin: $small-space 0;
             }    
-            button.rounded-button{
-                @include light-buttons-icons;
-                @include rounded-buttons;
-                padding: $xxsmall-space $xsmall-space;
+            span.rounded-label{
+                @include light-labels-icons;
+                @include rounded-labels;
+                padding: 0 $xsmall-space;
             }
             button.squared-button.blue{
                 margin-right: $xsmall-space;
@@ -125,7 +132,7 @@
                 @include flex-vertical;  
                 .title{
                     width: 50%;
-                    >p{
+                    >h2,p{
                        padding: $small-space 0; 
                     }
                 }
@@ -139,7 +146,7 @@
                         border: 1.5px solid $border-light-gray;
                         padding: $small-space;
                         .card-icon{
-                            @include light-buttons-icons;
+                            @include light-labels-icons;
                             @include center-icon;
                             padding: $small-space;
                             width: 60px;
@@ -187,7 +194,8 @@
                             width: 25%;
                             border-radius: 10px;
                             text-align: center;
-                            padding: $xsmall-space 0;                      
+                            padding: $xsmall-space 0;  
+                            cursor: pointer;                    
                         }
                         li.active{
                             background-color: $dark-grey;
@@ -203,13 +211,29 @@
                     padding: $small-space 0;
                     span{
                         margin-right: $normal-space;
-                        i{
-                            margin-right: $xsmall-space;
-                            color: $acid-green;
-                        }
                     }
                 }
                 
+            }
+        }
+
+        #build{
+            .container{
+                justify-content: space-between;
+                >div{
+                    width: calc(50% - 50px);
+                    img{
+                        width: 100%;
+                    }
+                }
+                .section-title{
+                    >*{
+                        padding: $xsmall-space 0;
+                    }
+                    li{
+                        line-height: 30px;
+                    }
+                }
             }
         }
     }

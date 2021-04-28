@@ -65,9 +65,9 @@
         <section id="jumbotron">
             <div class="container">
                 <!-- description-section -->
-                <div class="title">
+                <div class="section-title">
                     <div>
-                        <button class="rounded-button small-text">Development</button>
+                        <span class="rounded-label small-text">Development</span>
                     </div>
                     <div class="main-part">
                         <h1>A Complete Developer Toolset</h1>
@@ -140,7 +140,7 @@
                 </div>  
                 <!-- tools block -->
                 <div class="mini-container">
-                    <!-- gray part -->
+                    <!-- grey part -->
                     <div class="grey-container">
                         <ul>
                             <li class="big-text" v-for="item in startItems">
@@ -153,8 +153,8 @@
                     </div>
                     <!-- didascalic part -->
                     <div class="didascalic">
-                        <span><i class="far fa-check-circle"></i>Organize your data</span>
-                        <span><i class="far fa-check-circle"></i>Work with any team</span>
+                        <span><i class="green-text far fa-check-circle"></i>Organize your data</span>
+                        <span><i class="green-text far fa-check-circle"></i>Work with any team</span>
                     </div>
                 </div>
                 
@@ -164,12 +164,23 @@
             <section id="build">
                 <div class="container">
                     <!-- description -->
-                    <div>
-
+                    <div class="section-title">
+                        <h2>Build tools and
+                            extensive documention
+                        </h2>
+                        <p>You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.</p>
+                        <ul>
+                            <li v-for="strength in strengths">
+                                <span><i class="blue-text far fa-check-circle"></i>{{strength}}</span>
+                            </li>
+                        </ul>
+                        <div>
+                            <button class="big-text squared-button blue">Read More <small><i class="fas fa-arrow-right"></i></small></button>
+                        </div>
                     </div>
                     <!-- image -->
                     <div>
-
+                        <img src="img/1.png" alt="">
                     </div>
                 </div>
             </section>

@@ -24,6 +24,7 @@ function init(){
                 },
             ],
             startItems:['npm','nuget','spm','github'],
+            strengths:['Digital Marketing Solutions for Tomorrow','Our Talented & Experienced Marketing Agency','Create your own skin to match your brand'],
         }, 
         methods:{
             getLogo: function(logo){

@@ -26,7 +26,8 @@ function init() {
         "class": "fas fa-expand-arrows-alt",
         title: "Scalable"
       }],
-      startItems: ['npm', 'nuget', 'spm', 'github']
+      startItems: ['npm', 'nuget', 'spm', 'github'],
+      strengths: ['Digital Marketing Solutions for Tomorrow', 'Our Talented & Experienced Marketing Agency', 'Create your own skin to match your brand']
     },
     methods: {
       getLogo: function getLogo(logo) {

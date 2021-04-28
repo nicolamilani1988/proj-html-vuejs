@@ -34,9 +34,14 @@ $h2-font: 1.8rem;
 
 
 //icone
-@mixin light-buttons-icons{
+@mixin light-labels-icons{
     color: $dark-blue;
     background-color: $bordered-lightgray-buttons;
+}
+
+@mixin rounded-labels{
+    border-radius: 20px;
+    border: 1px solid $light-grey;
 }
 
 @mixin center-icon{
@@ -47,11 +52,6 @@ $h2-font: 1.8rem;
 
 
 //bottoni
-@mixin rounded-buttons{
-    border-radius: 20px;
-    border: 1px solid $light-grey;
-}
-
 @mixin squared-button{
     border-radius: 5px;
     padding: $xsmall-space $small-space;

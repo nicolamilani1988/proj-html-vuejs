@@ -19,6 +19,14 @@
   background-color: #F8F9FC;
   color: #2F55D4;
 }
+#home-page .section-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#home-page i.blue-text, #home-page i.green-text {
+  margin-right: 10px;
+}
 #home-page header {
   padding: 20px 0;
   background-color: #F8F9FC;
@@ -76,28 +84,25 @@
   margin-top: 80px;
   padding: 80px 0;
 }
-#home-page #jumbotron .title {
+#home-page #jumbotron .section-title {
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-#home-page #jumbotron .title .main-part {
+#home-page #jumbotron .section-title .main-part {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-right: 40px;
 }
-#home-page #jumbotron .title p {
+#home-page #jumbotron .section-title p {
   margin: 20px 0;
 }
-#home-page #jumbotron .title button.rounded-button {
+#home-page #jumbotron .section-title span.rounded-label {
   color: #2F55D4;
   background-color: #2F55D41A;
   border-radius: 20px;
   border: 1px solid #ADB5BD;
-  padding: 5px 10px;
+  padding: 0 10px;
 }
-#home-page #jumbotron .title button.squared-button.blue {
+#home-page #jumbotron .section-title button.squared-button.blue {
   margin-right: 10px;
 }
 #home-page #partners {
@@ -123,7 +128,7 @@
 #home-page main #features .container .title {
   width: 50%;
 }
-#home-page main #features .container .title > p {
+#home-page main #features .container .title > h2, #home-page main #features .container .title p {
   padding: 20px 0;
 }
 #home-page main #features .container .cards-container {
@@ -190,6 +195,7 @@
   border-radius: 10px;
   text-align: center;
   padding: 10px 0;
+  cursor: pointer;
 }
 #home-page main #quickstart .mini-container .grey-container ul li.active {
   background-color: #3C4858;
@@ -203,9 +209,20 @@
 #home-page main #quickstart .mini-container .didascalic span {
   margin-right: 40px;
 }
-#home-page main #quickstart .mini-container .didascalic span i {
-  margin-right: 10px;
-  color: #2ECA8B;
+#home-page main #build .container {
+  justify-content: space-between;
+}
+#home-page main #build .container > div {
+  width: calc(50% - 50px);
+}
+#home-page main #build .container > div img {
+  width: 100%;
+}
+#home-page main #build .container .section-title > * {
+  padding: 10px 0;
+}
+#home-page main #build .container .section-title li {
+  line-height: 30px;
 }
 
 * {
