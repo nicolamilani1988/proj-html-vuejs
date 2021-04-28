@@ -29,7 +29,7 @@
         <header>
             <div class="container">
                 <!-- logo -->
-                <div class="img-container">
+                <div class="logo" >
                     <img src="img/logo-dark.png" alt="">
                 </div>
                 <!-- navbar  VUEJS--> 
@@ -44,16 +44,16 @@
                 <!-- actions VUEJS  -->
                 <div class="actions">
                     <ul>
-                        <li class="action-icon search">
+                        <li class="icon search">
                             <i class="fas fa-search"></i>
                         </li>
-                        <li class="action-icon tool">
+                        <li class="icon tool">
                             <i class="fab fa-github"></i>  
                         </li>
-                        <li class="action-icon tool">
+                        <li class="icon tool">
                             <i class="fab fa-stack-overflow"></i>
                         </li>
-                        <li class="action-icon tool">
+                        <li class="icon tool">
                             <i class="far fa-user"></i>
                         </li>
                     </ul>
@@ -261,16 +261,18 @@
                 <div class="container">
                     <!-- first column -->
                     <div>
-                        <div>
-                            <img src="" alt="">
+                        <div class="logo">
+                            <img src="img/logo-light.png" alt="">
                         </div>
                         <div>
-                            <p></p>
+                            <p>Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
                         </div>
                         <div>
                             <!-- social networks VUEJS -->
                             <ul>
-                                <li></li>
+                                <li class="icon tool" v-for="social in socials">
+                                    <i :class="social"></i>
+                                </li>
                             </ul>
                         </div>
                     </div>

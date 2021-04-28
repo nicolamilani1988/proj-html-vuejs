@@ -18,6 +18,8 @@ $dark-grey: #3C4858;
 $blue: #007BFF;
 $dark-blue: #2F55D4;
 $acid-green: #2ECA8B;
+$bg-dark: #202942;
+$night-blue:#27314f;
 //ribbon
 $ribbon-color: #F17425;
 $ribbon-border: #D55B0E;
@@ -52,6 +54,8 @@ $h2-font: 1.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 

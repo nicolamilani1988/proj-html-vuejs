@@ -46,7 +46,8 @@ function init() {
         period: 'Per Month',
         details: 'Advanced features for pros who need more customization.',
         bulletPoints: ['Full Access', 'Enhanced Security', 'Source File', '1 Domain Free', 'Enhanced Security']
-      }]
+      }],
+      socials: ['fab fa-facebook-f', 'fab fa-instagram', 'fab fa-twitter', 'fab fa-linkedin-in']
     },
     methods: {
       getLogo: function getLogo(logo) {

@@ -4,6 +4,12 @@
   display: flex;
   border: 1px solid red;
 }
+#home-page div.logo {
+  width: 13%;
+}
+#home-page div.logo img {
+  width: 100%;
+}
 #home-page .squared-button {
   border-radius: 5px;
   padding: 10px 20px;
@@ -66,12 +72,6 @@
   justify-content: space-between;
   align-items: center;
 }
-#home-page header .container .img-container {
-  width: 13%;
-}
-#home-page header .container .img-container img {
-  width: 100%;
-}
 #home-page header .container ul {
   display: flex;
 }
@@ -82,26 +82,28 @@
 #home-page header .container nav .list-item :hover {
   color: #2F55D4;
 }
-#home-page header .container .actions .action-icon {
+#home-page header .container .actions .icon {
   padding: 5px;
   width: 40px;
   height: 40px;
   margin: 0 5px;
   cursor: pointer;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
 }
-#home-page header .container .actions .action-icon.tool {
+#home-page header .container .actions .icon.tool {
   color: #2F55D4;
   background-color: #2F55D41A;
-  border-radius: 5px;
   box-shadow: 0 3px 5px 0 rgba(47, 85, 212, 0.3);
 }
-#home-page header .container .actions .action-icon.tool:hover {
+#home-page header .container .actions .icon.tool:hover {
   background-color: #2F55D4;
 }
-#home-page header .container .actions .action-icon.tool:hover i {
+#home-page header .container .actions .icon.tool:hover i {
   color: #F8F9FC;
 }
 #home-page #jumbotron {
@@ -164,6 +166,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
   padding: 20px;
   width: 60px;
   height: 60px;
@@ -311,6 +315,42 @@
 }
 #home-page main #join-us .email-form button {
   border-radius: 20px;
+}
+#home-page footer {
+  background-color: #202942;
+}
+#home-page footer #infos {
+  padding: 50px 0;
+}
+#home-page footer #infos .container {
+  justify-content: space;
+}
+#home-page footer #infos p {
+  padding: 40px 0;
+}
+#home-page footer #infos ul {
+  width: 25%;
+  display: flex;
+}
+#home-page footer #infos ul li.tool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #27314f;
+}
+#home-page footer #infos ul li.icon.tool:hover {
+  background-color: #2F55D4;
+}
+#home-page footer #infos ul li.icon.tool:hover i {
+  color: #F8F9FC;
 }
 
 * {
