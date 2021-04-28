@@ -424,6 +424,11 @@
   padding: 10px 20px;
   background-color: #27314f;
   border-radius: 5px;
+  border: 1.5px solid #27314f;
+}
+#home-page footer #infos .container .medium.newsletter .email-form:hover {
+  border: 1.5px solid #2F55D4;
+  transition: all 0.5s ease;
 }
 #home-page footer #infos .container .medium.newsletter .email-form i {
   margin-right: 10px;

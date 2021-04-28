@@ -404,6 +404,11 @@
                        padding: $xsmall-space $small-space;
                        background-color: $night-blue;
                        border-radius: 5px;
+                       border: 1.5px solid $night-blue;
+                       &:hover{
+                        border: 1.5px solid $dark-blue;
+                        transition: $standard-transition;
+                        }
                        i{
                            margin-right: $xsmall-space;
                        }
