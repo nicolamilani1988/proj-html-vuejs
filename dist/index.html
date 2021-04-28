@@ -35,8 +35,8 @@
                 <!-- navbar  VUEJS--> 
                 <nav>
                     <ul>
-                        <li class="list-item"><a href=""><strong>HOME</strong></a></li>
-                        <li class="list-item" v-for="item in menuItems">
+                        <li class="list-item thin-text"><a href=""><strong>HOME</strong></a></li>
+                        <li class="list-item thin-text" v-for="item in menuItems">
                             <a href=""><strong>{{item}} <i class="fas fa-chevron-down"></i></strong></a>
                         </li>
                     </ul>
@@ -236,10 +236,21 @@
 
             <!-- MAIN fifth part: join-us -->
             <section id="join-us">
-                <h2></h2>
-                <p></p>
-                <input type="text">
-                <button></button>
+                <div class="section-title center">
+                    <h2>Want to be among the first to find out?</h2>
+                    <p>Start working with <span class="blue-text"><strong>Landrick</strong></span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                    <div class="email-form">
+                        <div>
+                            <input type="text" placeholder="Email Address">
+                        </div>
+                        <div>
+                            <button class="squared-button blue">Get Started</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
             </section>
         </main>
 

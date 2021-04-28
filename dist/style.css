@@ -26,7 +26,7 @@
 }
 #home-page .section-title.center {
   text-align: center;
-  width: 40%;
+  width: 35%;
   margin: auto;
 }
 #home-page .section-title.center > h2, #home-page .section-title.center p {
@@ -52,6 +52,7 @@
   border: 1px solid #ADB5BD;
 }
 #home-page header {
+  z-index: 999;
   padding: 20px 0;
   background-color: #F8F9FC;
   border-bottom: 1px solid #F8F9FC;
@@ -66,7 +67,7 @@
   align-items: center;
 }
 #home-page header .container .img-container {
-  width: 15%;
+  width: 13%;
 }
 #home-page header .container .img-container img {
   width: 100%;
@@ -124,6 +125,9 @@
 }
 #home-page #jumbotron .section-title button.squared-button.blue {
   margin-right: 10px;
+}
+#home-page #jumbotron img {
+  margin-left: 50px;
 }
 #home-page #partners {
   background-color: #F8F9FC;
@@ -227,6 +231,9 @@
 #home-page main #build .container .section-title li {
   line-height: 30px;
 }
+#home-page main #rates {
+  padding: 50px 0;
+}
 #home-page main #rates .card {
   position: relative;
   width: calc((100% - 40px) / 3);
@@ -280,6 +287,31 @@
   top: -15px;
   right: -17px;
 }
+#home-page main #join-us .email-form {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: 1.5px solid #E9ECEF;
+}
+#home-page main #join-us .email-form input, #home-page main #join-us .email-form button {
+  font-size: 1.1rem;
+}
+#home-page main #join-us .email-form input {
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+#home-page main #join-us .email-form input::-moz-placeholder {
+  color: gray;
+}
+#home-page main #join-us .email-form input:-ms-input-placeholder {
+  color: gray;
+}
+#home-page main #join-us .email-form input::placeholder {
+  color: gray;
+}
+#home-page main #join-us .email-form button {
+  border-radius: 20px;
+}
 
 * {
   box-sizing: border-box;
@@ -311,8 +343,15 @@ body a {
 body li {
   list-style-type: none;
 }
+body input {
+  border: none;
+  outline: none;
+}
 body .small-text {
   font-size: 0.7rem;
+}
+body .thin-text {
+  font-size: 0.9rem;
 }
 body .big-text {
   font-size: 1.1rem;

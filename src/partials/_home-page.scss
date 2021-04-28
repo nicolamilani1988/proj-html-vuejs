@@ -29,7 +29,7 @@
 
     .section-title.center{
         text-align: center;
-        width: 40%;
+        width: 35%;
         margin: auto;
         >h2,p{
             padding: $xsmall-space 0;
@@ -58,6 +58,7 @@
     }    
 
     header{
+        z-index: 999;
         padding: $small-space 0;
         background-color: $lighter-grey;
         border-bottom: 1px solid $lighter-grey;
@@ -65,13 +66,12 @@
         top: 0;
         right: 0;
         left: 0;
-        height: 80px;
-        
+        height: 80px;       
         .container{
             justify-content: space-between;
             align-items: center;
             .img-container{
-                width: 15%;
+                width: 13%;
                 img{
                     width: 100%;
                 }
@@ -132,6 +132,9 @@
             button.squared-button.blue{
                 margin-right: $xsmall-space;
             }
+        }
+        img{
+            margin-left: 50px;
         }
     }
 
@@ -248,6 +251,7 @@
         }
 
         #rates{
+            padding: $large-space 0;
             .card{
                 position: relative;
                 width: calc((100% - 40px) / 3);
@@ -302,6 +306,27 @@
                     
                 }
             }
+        }
+        #join-us{
+            .email-form{
+                display: flex;
+                justify-content: space-between;
+                border-radius: 20px;
+                border: 1.5px solid $border-light-gray;
+                input,button{
+                    font-size: $big-font;
+                }
+                input{
+                    padding: $xsmall-space $small-space;
+                    margin-left: $xsmall-space;
+                }
+                input::placeholder{
+                    color: gray;
+                }  
+                button{
+                    border-radius: 20px;
+                }  
+            }    
         }
     }
 }

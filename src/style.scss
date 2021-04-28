@@ -37,7 +37,16 @@ body{
         list-style-type: none;
     }
 
+    input{
+        border: none;
+        outline: none;
+    }
+
     .small-text{
+        font-size: $smaller-font;
+    }
+
+    .thin-text{
         font-size: $small-font;
     }
 
