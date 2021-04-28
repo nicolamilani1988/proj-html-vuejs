@@ -40,7 +40,7 @@ $h1-font: 2.5rem;
 $h2-font: 1.8rem;
 
 //transition
-$standard-transition: all .5s ease;
+$standard-transition: all 0.5s ease;
 
 
 //icone
@@ -51,7 +51,7 @@ $standard-transition: all .5s ease;
 
 @mixin rounded-labels{
     border-radius: 20px;
-    border: 1px solid $light-grey;
+    border: 1.5px solid $light-grey;
 }
 
 @mixin center-icon{
@@ -75,7 +75,7 @@ $standard-transition: all .5s ease;
 @mixin squared-button{
     border-radius: 5px;
     padding: $xsmall-space $small-space;
-    border: 1px solid $dark-blue;
+    border: 1.5px solid $dark-blue;
     box-shadow: $box-shadow;
     cursor: pointer;
 }
@@ -88,6 +88,11 @@ $standard-transition: all .5s ease;
 @mixin bg-clear-blu-text{
     background-color: transparent;
     color: $dark-blue;
+}
+
+@mixin blu-botton-hover{
+    background-color: $hover-dark-blue;
+    transition: $standard-transition;
 }
 
 
@@ -106,7 +111,7 @@ $standard-transition: all .5s ease;
 //content
 @mixin centered-content{
     text-align: center;
-    width: 35%;
+    width: 30%;
     margin: auto;
     >h2,p{
         padding: $xsmall-space 0;

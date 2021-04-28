@@ -239,22 +239,22 @@
 
             <!-- MAIN fifth part: join-us -->
             <section id="join-us">
+
                 <div class="section-title center">
                     <h2>Want to be among the first to find out?</h2>
                     <p>Start working with <span class="blue-text"><strong>Landrick</strong></span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
-                    <div class="email-form">
+                    <form class="email-form">
                         <div>
-                            <input type="text" placeholder="Email Address">
+                            <input type="email" placeholder="Email Address" required>
                         </div>
                         <div>
                             <button class="squared-button blue">Get Started</button>
-                        </div>
-                        
-                    </div>
-                    
+                        </div>              
+                    </form>
                 </div>
                 
             </section>
+
         </main>
 
         <!-- last part: FOOTER -->
@@ -270,8 +270,8 @@
                         <div>
                             <p>Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
                         </div>
+                        <!-- social networks VUEJS -->
                         <div>
-                            <!-- social networks VUEJS -->
                             <ul class="social-networks">
                                 <li class="icon social-network" v-for="social in socials">
                                     <i :class="social"></i>
@@ -283,7 +283,7 @@
                     <div :class="utility['width']" v-for="utility in utilities">
                         <h3>{{utility['title']}}</h3>
                         <ul>
-                            <li v-for="link in utility['links']"><a href=""><i class="fas fa-chevron-right"></i> {{link}}</a></li>
+                            <li class="info-links" v-for="link in utility['links']"><a href=""><i class="fas fa-chevron-right"></i> {{link}}</a></li>
                         </ul>
                     </div>                
                     <!-- fourth column -->
@@ -321,7 +321,9 @@
                     <!-- creditcards VUEJS -->
                     <ul>
                         <li v-for="method in acceptedPayments">
-                            <img :src="getImg(method,'png')" alt="">
+                            <a href="">
+                                <img :src="getImg(method,'png')" alt="">
+                            </a>
                         </li>
                     </ul>
                 </div>

@@ -15,6 +15,9 @@
 
     .squared-button.blue{
         @include bg-blu-grey-text;
+        &:hover{
+            @include blu-botton-hover;
+        }
     }
 
     .section-title{
@@ -81,8 +84,8 @@
             .actions{
                 .icon{
                     padding: $xxsmall-space;
-                    width: $normal-space;
-                    height: $normal-space;
+                    width: 40px;
+                    height: 40px;
                     margin: 0 $xxsmall-space;
                     @include center-icon;
                     &.tool{
@@ -117,10 +120,6 @@
             .squared-button{
                 &.blue{
                     margin-right: $xsmall-space;
-                    &:hover{
-                        background-color: $hover-dark-blue;
-                        transition: $standard-transition;
-                    }
                 }
                 &.clear{
                     @include bg-clear-blu-text;
@@ -207,15 +206,15 @@
                 .grey-container{
                     background-color: $dark-grey;
                     padding: $small-space;
-                    border-radius: 5px;
+                    border-radius: 10px;
                     h3{
                         color: white;
                     }
                     ul{
                         display: flex;
                         justify-content: space-between;
-                        border: 1px solid $standard-text-grey;
-                        border-radius: 5px;
+                        border: 1.5px solid $standard-text-grey;
+                        border-radius: 10px;
                         background-color: $mouse-grey;
                         li{
                             width: 25%;
@@ -262,13 +261,7 @@
                     li{
                         line-height: 30px;
                     }
-                }
-                .squared-button{
-                    &:hover{
-                        background-color: $hover-dark-blue;
-                        transition: $standard-transition;
-                    }
-                }    
+                }   
             }
         }
 
@@ -277,6 +270,7 @@
             .card{
                 position: relative;
                 width: calc((100% - 40px) / 3);
+                border-bottom:3px solid $light-grey;
                 span.rounded-label{
                     padding: $xxsmall-space $small-space;
                 }
@@ -289,9 +283,6 @@
                 li{
                     line-height: 30px;
                     color: $mouse-grey;
-                }
-                .separation-line{
-                    border-color: $border-light-gray;
                 }
                 .ribbon{
                     width: 90px;
@@ -325,7 +316,12 @@
                             right: -17px;
                         }
                     }
-                    
+                }
+                &:hover{
+                    transform: scale(1.03);
+                    transition: $standard-transition;
+                    box-shadow: 0 5px 13px rgb(60 72 88 / 20%);
+                    border-bottom:3px solid $dark-blue;
                 }
             }
         }
@@ -362,9 +358,12 @@
                     color: white;
                     margin-bottom: $small-space;
                 }
+                li{
+                    margin-bottom: $xsmall-space;
+                }
                 .large{
-                    width: calc(100% / 3);
-                    margin-right: 30px;
+                    width: calc((100% / 3) - 40px);
+                    margin-right: $normal-space;
                     p{
                         padding: $normal-space 0;
                     }
@@ -376,7 +375,7 @@
                             margin-right: $xsmall-space;
                             width: 25px;
                             height: 25px;
-                            border: 1px solid #27314f;
+                            border: 1.5px solid $night-blue;
                         }
                         li.icon.social-network:hover{
                             @include icon-hover;
@@ -384,15 +383,17 @@
                     }
                 }
                 .small{
-                    width: calc((100% / 6) - 30px);
-                    li{
-                        margin-bottom: $xsmall-space;
-                    }
+                    width: calc(100% / 6);
                 }
                 .medium{
                     width: (100% / 4);
-                    li{
-                        margin-bottom: $xsmall-space;
+                }
+                .info-links{
+                    i{
+                        font-size: $smaller-font;
+                    }
+                    a:hover{
+                        color: white;
                     }
                 }
                 .medium.newsletter{
@@ -414,15 +415,16 @@
                        }
                    }
                    button{
-                    color: $dark-blue;
-                    background-color: $night-blue;
-                    border: none;
-                    margin-top: $small-space;
-                    width: 100%;
-                    &:hover{
-                        @include bg-blu-grey-text;
-                    }
-                   } 
+                        color: $dark-blue;
+                        background-color: $night-blue;
+                        border: none;
+                        margin-top: $small-space;
+                        width: 100%;
+                        &:hover{
+                            @include bg-blu-grey-text;
+                            transition: $standard-transition;
+                        }
+                   }
                 }
             }     
         }

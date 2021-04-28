@@ -9,13 +9,17 @@
 #home-page .squared-button {
   border-radius: 5px;
   padding: 10px 20px;
-  border: 1px solid #2F55D4;
+  border: 1.5px solid #2F55D4;
   box-shadow: 0 3px 5px 0 rgba(47, 85, 212, 0.3);
   cursor: pointer;
 }
 #home-page .squared-button.blue {
   color: #F8F9FC;
   background-color: #2F55D4;
+}
+#home-page .squared-button.blue:hover {
+  background-color: #2443AC;
+  transition: all 0.5s ease;
 }
 #home-page .section-title {
   display: flex;
@@ -24,7 +28,7 @@
 }
 #home-page .section-title.center {
   text-align: center;
-  width: 35%;
+  width: 30%;
   margin: auto;
 }
 #home-page .section-title.center > h2, #home-page .section-title.center p {
@@ -47,7 +51,7 @@
   color: #2F55D4;
   background-color: #2F55D41A;
   border-radius: 20px;
-  border: 1px solid #ADB5BD;
+  border: 1.5px solid #ADB5BD;
 }
 #home-page .change_color {
   background-color: white;
@@ -126,10 +130,6 @@
 }
 #home-page #jumbotron .section-title .squared-button.blue {
   margin-right: 10px;
-}
-#home-page #jumbotron .section-title .squared-button.blue:hover {
-  background-color: #2443AC;
-  transition: all 0.5s ease;
 }
 #home-page #jumbotron .section-title .squared-button.clear {
   background-color: transparent;
@@ -225,7 +225,7 @@
 #home-page main #quickstart .mini-container .grey-container {
   background-color: #3C4858;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 #home-page main #quickstart .mini-container .grey-container h3 {
   color: white;
@@ -233,8 +233,8 @@
 #home-page main #quickstart .mini-container .grey-container ul {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #8492A6;
-  border-radius: 5px;
+  border: 1.5px solid #8492A6;
+  border-radius: 10px;
   background-color: #4F5A69;
 }
 #home-page main #quickstart .mini-container .grey-container ul li {
@@ -275,16 +275,13 @@
 #home-page main #build .container .section-title li {
   line-height: 30px;
 }
-#home-page main #build .container .squared-button:hover {
-  background-color: #2443AC;
-  transition: all 0.5s ease;
-}
 #home-page main #rates {
   padding: 50px 0;
 }
 #home-page main #rates .card {
   position: relative;
   width: calc((100% - 40px) / 3);
+  border-bottom: 3px solid #ADB5BD;
 }
 #home-page main #rates .card span.rounded-label {
   padding: 5px 20px;
@@ -298,9 +295,6 @@
 #home-page main #rates .card li {
   line-height: 30px;
   color: #4F5A69;
-}
-#home-page main #rates .card .separation-line {
-  border-color: #E9ECEF;
 }
 #home-page main #rates .card .ribbon {
   width: 90px;
@@ -334,6 +328,12 @@
 #home-page main #rates .card .ribbon .ribbon-text .fake-square.right {
   top: -15px;
   right: -17px;
+}
+#home-page main #rates .card:hover {
+  transform: scale(1.03);
+  transition: all 0.5s ease;
+  box-shadow: 0 5px 13px rgba(60, 72, 88, 0.2);
+  border-bottom: 3px solid #2F55D4;
 }
 #home-page main #join-us .email-form {
   display: flex;
@@ -373,9 +373,12 @@
   color: white;
   margin-bottom: 20px;
 }
+#home-page footer #infos .container li {
+  margin-bottom: 10px;
+}
 #home-page footer #infos .container .large {
-  width: calc(100% / 3);
-  margin-right: 30px;
+  width: calc((100% / 3) - 40px);
+  margin-right: 40px;
 }
 #home-page footer #infos .container .large p {
   padding: 40px 0;
@@ -393,7 +396,7 @@
   margin-right: 10px;
   width: 25px;
   height: 25px;
-  border: 1px solid #27314f;
+  border: 1.5px solid #27314f;
 }
 #home-page footer #infos .container .large ul.social-networks li.icon.social-network:hover {
   background-color: #2F55D4;
@@ -403,16 +406,16 @@
   color: #F8F9FC;
 }
 #home-page footer #infos .container .small {
-  width: calc((100% / 6) - 30px);
-}
-#home-page footer #infos .container .small li {
-  margin-bottom: 10px;
+  width: calc(100% / 6);
 }
 #home-page footer #infos .container .medium {
   width: 25%;
 }
-#home-page footer #infos .container .medium li {
-  margin-bottom: 10px;
+#home-page footer #infos .container .info-links i {
+  font-size: 0.7rem;
+}
+#home-page footer #infos .container .info-links a:hover {
+  color: white;
 }
 #home-page footer #infos .container .medium.newsletter p.thin-text {
   margin: 10px 0 5px;
@@ -447,6 +450,7 @@
 #home-page footer #infos .container .medium.newsletter button:hover {
   color: #F8F9FC;
   background-color: #2F55D4;
+  transition: all 0.5s ease;
 }
 #home-page footer #credits .container {
   justify-content: space-between;
@@ -517,7 +521,7 @@ body .red-text {
   color: red;
 }
 body div.separation-line {
-  border-top: 1px solid #ADB5BD;
+  border-top: 1.5px solid #E9ECEF;
 }
 body .fade-enter-active {
   transition: opacity 0.5s;
