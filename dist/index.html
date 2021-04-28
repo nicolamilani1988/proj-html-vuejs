@@ -14,8 +14,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- VueJS -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <!-- VueAxios -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script> -->
     <!-- my css -->
     <link rel="stylesheet" href="style.css">
     <!-- my script -->
@@ -24,9 +22,8 @@
 
 <body>
     <div id="home-page">
-
         <!-- fixed section on top -->
-        <header>
+        <header :class="{change_color: scrollPosition > 50}">
             <div class="container">
                 <!-- logo -->
                 <div class="logo" >
@@ -41,7 +38,7 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- actions VUEJS  -->
+                <!-- actions -->
                 <div class="actions">
                     <ul>
                         <li class="icon search">
@@ -94,7 +91,7 @@
         <section id="partners">
             <div class="container">
                 <div class="partner" v-for="logo in partners">
-                    <img :src="getLogo(logo)" alt="">
+                    <img :src="getImg(logo,'svg')" alt="">
                 </div>
             </div> 
         </section>
@@ -260,7 +257,7 @@
             <section id="infos">
                 <div class="container">
                     <!-- first column -->
-                    <div>
+                    <div class="large">
                         <div class="logo">
                             <img src="img/logo-light.png" alt="">
                         </div>
@@ -269,50 +266,57 @@
                         </div>
                         <div>
                             <!-- social networks VUEJS -->
-                            <ul>
-                                <li class="icon tool" v-for="social in socials">
+                            <ul class="social-networks">
+                                <li class="icon social-network" v-for="social in socials">
                                     <i :class="social"></i>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <!-- second column VUEJS -->
-                    <div>
-                        <h3></h3>
+                    <!-- second and third columnes VUEJS -->
+                    <div :class="utility['width']" v-for="utility in utilities">
+                        <h3>{{utility['title']}}</h3>
                         <ul>
-                            <li></li>
+                            <li v-for="link in utility['links']"><a href=""><i class="fas fa-chevron-right"></i> {{link}}</a></li>
                         </ul>
-                    </div>
-                    <!-- third column VUEJS -->
-                    <div>
-                        <h3></h3>
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </div>
+                    </div>                
                     <!-- fourth column -->
-                    <div>
-                        <h3></h3>
-                        <p></p>
-                        <div>
-                            <input type="text">
-                        </div>
-                        <div>
-                            <button></button>
-                        </div>
+                    <div class="medium newsletter">
+                        <form>
+                            <h3>Newsletter</h3>
+                            <p>Sign up and receive the latest tips via email.</p>
+                            <div>
+                                <label for="email">
+                                    <p class="thin-text"><strong>Write your email<span class="red-text">*</span></strong></p>
+                                </label>      
+                            </div>
+                            <div class="email-form">
+                                <i class="far fa-envelope"></i>
+                                <input id="email" type="email" placeholder="Your Email:" required>
+                            </div>
+                            <div>
+                                <button class="squared-button clear big-text">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>
+
+            <div class="separation-line"></div>
 
             <!-- FOOTER second part: credits -->
             <section id="credits">
                 <div class="container">
                     <div>
-                        <p></p>
+                        <p>© 2021 Landrick. Design with <i class="red-text fas fa-heart"></i> by Shreethemes.</p>
                     </div>
                     <!-- creditcards VUEJS -->
                     <ul>
-                        <li></li>
+                        <li v-for="method in acceptedPayments">
+                            <img :src="getImg(method,'png')" alt="">
+                        </li>
                     </ul>
                 </div>
             </section>

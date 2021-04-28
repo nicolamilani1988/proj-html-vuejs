@@ -3,7 +3,10 @@ function init(){
         el: "#home-page",
 
         data:{
+            scrollPosition: null,
+
             menuItems:['LANDING','PAGES','DOCS'],
+            
             partners:['amazon','google','lenovo','paypal','shopify','spotify'],
             cards:[
                 {
@@ -23,8 +26,11 @@ function init(){
                     title: "Scalable",
                 },
             ],
+
             startItems:['npm','nuget','spm','github'],
+
             strengths:['Digital Marketing Solutions for Tomorrow','Our Talented & Experienced Marketing Agency','Create your own skin to match your brand'],
+
             memberships:[
                 {
                     title:'Basic',
@@ -48,15 +54,37 @@ function init(){
                     bulletPoints: ['Full Access','Enhanced Security', 'Source File', '1 Domain Free','Enhanced Security'],
                 },
             ],
+
             socials:['fab fa-facebook-f','fab fa-instagram','fab fa-twitter','fab fa-linkedin-in'],
-            
+
+            utilities: [
+                {
+                    title: 'Company',
+                    links: ['About Us','Services','Team','Pricing','Project','Careers','Blog','Login'],
+                    width: 'small',
+                },
+                {
+                    title: 'Useful Links',
+                    links: ['Terms of Services','Privacy Policy','Documentation','Changelog','Components'],
+                    width: 'medium',
+                },
+            ],
+
+            acceptedPayments: ['american-ex','discover','master-card','paypal','visa'],
         }, 
         methods:{
-            getLogo: function(logo){
-                const path = 'img/'+logo+'.svg';
+            getImg: function(logo, format){
+                const path = 'img/'+logo+'.' + format;
                 return path;
             },
-        }    
+            updateScroll() {
+                this.scrollPosition = window.scrollY;
+            },
+        },
+        mounted() {
+            window.addEventListener('scroll', this.updateScroll);
+        }
+          
             
     })   
 }

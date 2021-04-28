@@ -20,6 +20,7 @@ $dark-blue: #2F55D4;
 $acid-green: #2ECA8B;
 $bg-dark: #202942;
 $night-blue:#27314f;
+$hover-dark-blue: #2443AC;
 //ribbon
 $ribbon-color: #F17425;
 $ribbon-border: #D55B0E;
@@ -37,6 +38,9 @@ $big-font: 1.1rem;
 $bigger-font: 1.5rem;
 $h1-font: 2.5rem;
 $h2-font: 1.8rem;
+
+//transition
+$standard-transition: all .5s ease;
 
 
 //icone
@@ -58,6 +62,14 @@ $h2-font: 1.8rem;
     border-radius: 5px;
 }
 
+@mixin icon-hover{
+    background-color: $dark-blue;
+    transition: all 0.5s ease;
+    i{
+        color: $lighter-grey;
+    }
+}
+
 
 //bottoni
 @mixin squared-button{
@@ -65,11 +77,50 @@ $h2-font: 1.8rem;
     padding: $xsmall-space $small-space;
     border: 1px solid $dark-blue;
     box-shadow: $box-shadow;
+    cursor: pointer;
+}
+
+@mixin bg-blu-grey-text{
+    color: $lighter-grey;
+    background-color: $dark-blue;
+}
+
+@mixin bg-clear-blu-text{
+    background-color: transparent;
+    color: $dark-blue;
 }
 
 
-//flex
+//flex and display style
+@mixin standard-container{
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+}
+
 @mixin flex-vertical{
     display:flex;
     flex-direction: column;
+}
+
+//content
+@mixin centered-content{
+    text-align: center;
+    width: 35%;
+    margin: auto;
+    >h2,p{
+        padding: $xsmall-space 0;
+    }
+}
+
+@mixin cards-container{
+    padding: $normal-space 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin card-style{
+    border-radius: 10px;
+    border: 1.5px solid $border-light-gray;
+    padding: $small-space;
 }

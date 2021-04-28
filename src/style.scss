@@ -40,6 +40,7 @@ body{
     input{
         border: none;
         outline: none;
+        background-color: transparent;
     }
 
     .small-text{
@@ -64,6 +65,10 @@ body{
 
     .green-text{
         color: $acid-green;
+    }
+
+    .red-text{
+        color: red;
     }
 
     div.separation-line{
