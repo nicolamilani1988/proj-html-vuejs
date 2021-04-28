@@ -151,14 +151,14 @@
     }
 
     main{
-        padding: $xxlarge-space 0;
+        padding: $xlarge-space 0;
         #features{
             .container{
                 @include flex-vertical;  
-                .title{
+                .section-title{
                     width: 50%;
                     >h2,p{
-                       padding: $small-space 0; 
+                       padding: $xsmall-space 0; 
                     }
                 }
                 .cards-container{
@@ -177,6 +177,9 @@
                         }
                         h3,p{
                             margin: $small-space 0;
+                        }
+                        &:hover{
+                            background-color: red;
                         }
                     }
                 }
