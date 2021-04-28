@@ -133,7 +133,7 @@
             <!-- MAIN second part: quickstart -->
             <section id="quickstart">
                 <!-- description -->
-                <div class="title">
+                <div class="section-title center">
                     <div class="blue-text">Quickstart</div>
                     <h2>Awesome isn't it? Let's dive in!</h2>
                     <p>Start working with <span class="blue-text"><strong>Landrick</strong></span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
@@ -188,36 +188,49 @@
             <!-- MAIN fourth part: rates -->
             <section id="rates">
                 <!-- description -->
-                <h2></h2>
-                <p></p>
-                <!-- 3 cards -->
+                <div class="section-title center">
+                    <h2>Our rates for developer from landrick team</h2>
+                    <p>Start working with <span class="blue-text"><strong>Landrick</strong></span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                </div>
+                <!-- 3 cards VUEJS -->
                 <div class="container">
-                    <!-- prima carta -->
-                    <div>
-                        <div>
-                            <button></button>
+                    <div class="cards-container">
+                        <!-- prima carta -->
+                        <div v-for="membership in memberships" class=card>
+                            <div>
+                                <span class="rounded-label">{{membership['title']}}</span>
+                            </div>
+                            <div>
+                                <h1>{{membership['rate']}}</h1>
+                                <p>{{membership['period']}}</p>
+                            </div>
+                            <div class="details">
+                                <p>{{membership['details']}}</p>
+                            </div>
+                            <!-- riga separazione -->
+                            <div class="separation-line"></div>
+                            <!-- checkbox list VUEJS -->
+                            <div>
+                                <ul>
+                                    <li v-for="bulletPoint in membership['bulletPoints']"><i class="blue-text far fa-check-circle"></i>{{bulletPoint}}</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="squared-button blue">Buy Now</div>
+                                <p>*No credit card required</p>
+                            </div>
+                            <div v-if="membership['title'] == 'Business'" class="ribbon">
+                                <div class="ribbon-text">
+                                    <div class="fake-square left"></div>
+                                    Best
+                                    <div class="fake-square right" ></div>
+                                </div>
+                            </div>
+                            
                         </div>
-                        <div>
-                            <h1></h1>
-                            <p></p>
-                        </div>
-                        <div>
-                            <p></p>
-                        </div>
-                        <!-- riga separazione -->
-                        <div></div>
-                        <!-- checkbox list VUEJS -->
-                        <div>
-                            <ul>
-                                <li></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <button></button>
-                            <p></p>
-                        </div>
+                        <!-- ... -->
                     </div>
-                    <!-- ... -->
+                        
                 </div>
             </section>
 

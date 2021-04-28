@@ -27,9 +27,35 @@
         justify-content: center;
     }
 
+    .section-title.center{
+        text-align: center;
+        width: 40%;
+        margin: auto;
+        >h2,p{
+            padding: $xsmall-space 0;
+        }
+    }    
+
     i.blue-text, i.green-text{
         margin-right: $xsmall-space;
     }
+
+    .cards-container{
+        padding: $normal-space 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card{
+        border-radius: 10px;
+        border: 1.5px solid $border-light-gray;
+        padding: $small-space;
+    }
+
+    span.rounded-label{
+        @include light-labels-icons;
+        @include rounded-labels;
+    }    
 
     header{
         padding: $small-space 0;
@@ -101,8 +127,6 @@
                 margin: $small-space 0;
             }    
             span.rounded-label{
-                @include light-labels-icons;
-                @include rounded-labels;
                 padding: 0 $xsmall-space;
             }
             button.squared-button.blue{
@@ -137,14 +161,8 @@
                     }
                 }
                 .cards-container{
-                    padding: $normal-space 0;
-                    display: flex;
-                    justify-content: space-between;
                     .card{
                         width: calc((100% - 60px) / 4);
-                        border-radius: 10px;
-                        border: 1.5px solid $border-light-gray;
-                        padding: $small-space;
                         .card-icon{
                             @include light-labels-icons;
                             @include center-icon;
@@ -165,18 +183,10 @@
         }
 
         #quickstart{
-            @include flex-vertical;
             padding: $large-space 0;
-            align-items: center;
-            .title{
-                text-align: center;
-                width: 40%;
-                >h2,p{
-                    padding: $xsmall-space 0;
-                }
-            }
             .mini-container{
                 width: 50%;
+                margin: auto;
                 .grey-container{
                     background-color: $dark-grey;
                     padding: $small-space;
@@ -233,6 +243,63 @@
                     li{
                         line-height: 30px;
                     }
+                }
+            }
+        }
+
+        #rates{
+            .card{
+                position: relative;
+                width: calc((100% - 40px) / 3);
+                span.rounded-label{
+                    padding: $xxsmall-space $small-space;
+                }
+                h1{
+                    margin-top: $small-space;
+                }
+                .details,ul,.squared-button {
+                    margin: $small-space 0;
+                }
+                li{
+                    line-height: 30px;
+                    color: $mouse-grey;
+                }
+                .separation-line{
+                    border-color: $border-light-gray;
+                }
+                .ribbon{
+                    width: 90px;
+                    line-height: 30px;
+                    height: 90px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: rotate(45deg);
+                    text-align: center;
+                    .ribbon-text{
+                        color:white;
+                        background-color: $ribbon-color;
+                        height: 30px;
+                        position: relative;
+                        border-right: 2px solid $ribbon-border;
+                        border-left: 2px solid $ribbon-border;
+                        .fake-square{
+                            width: 30px;
+                            height: 30px;
+                            background-color: white;
+                            position: absolute;
+                            transform: rotate(45deg);
+                        }
+                        .fake-square.left{
+                            top: -15px;
+                            left: -17px;
+                        }
+                        .fake-square.right{
+                            top:-15px;
+                            right: -17px;
+                        }
+                    }
+                    
                 }
             }
         }

@@ -24,8 +24,32 @@
   flex-direction: column;
   justify-content: center;
 }
+#home-page .section-title.center {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+#home-page .section-title.center > h2, #home-page .section-title.center p {
+  padding: 10px 0;
+}
 #home-page i.blue-text, #home-page i.green-text {
   margin-right: 10px;
+}
+#home-page .cards-container {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#home-page .card {
+  border-radius: 10px;
+  border: 1.5px solid #E9ECEF;
+  padding: 20px;
+}
+#home-page span.rounded-label {
+  color: #2F55D4;
+  background-color: #2F55D41A;
+  border-radius: 20px;
+  border: 1px solid #ADB5BD;
 }
 #home-page header {
   padding: 20px 0;
@@ -96,10 +120,6 @@
   margin: 20px 0;
 }
 #home-page #jumbotron .section-title span.rounded-label {
-  color: #2F55D4;
-  background-color: #2F55D41A;
-  border-radius: 20px;
-  border: 1px solid #ADB5BD;
   padding: 0 10px;
 }
 #home-page #jumbotron .section-title button.squared-button.blue {
@@ -131,16 +151,8 @@
 #home-page main #features .container .title > h2, #home-page main #features .container .title p {
   padding: 20px 0;
 }
-#home-page main #features .container .cards-container {
-  padding: 40px 0;
-  display: flex;
-  justify-content: space-between;
-}
 #home-page main #features .container .cards-container .card {
   width: calc((100% - 60px) / 4);
-  border-radius: 10px;
-  border: 1.5px solid #E9ECEF;
-  padding: 20px;
 }
 #home-page main #features .container .cards-container .card .card-icon {
   color: #2F55D4;
@@ -160,20 +172,11 @@
   margin: 20px 0;
 }
 #home-page main #quickstart {
-  display: flex;
-  flex-direction: column;
   padding: 50px 0;
-  align-items: center;
-}
-#home-page main #quickstart .title {
-  text-align: center;
-  width: 40%;
-}
-#home-page main #quickstart .title > h2, #home-page main #quickstart .title p {
-  padding: 10px 0;
 }
 #home-page main #quickstart .mini-container {
   width: 50%;
+  margin: auto;
 }
 #home-page main #quickstart .mini-container .grey-container {
   background-color: #3C4858;
@@ -223,6 +226,59 @@
 }
 #home-page main #build .container .section-title li {
   line-height: 30px;
+}
+#home-page main #rates .card {
+  position: relative;
+  width: calc((100% - 40px) / 3);
+}
+#home-page main #rates .card span.rounded-label {
+  padding: 5px 20px;
+}
+#home-page main #rates .card h1 {
+  margin-top: 20px;
+}
+#home-page main #rates .card .details, #home-page main #rates .card ul, #home-page main #rates .card .squared-button {
+  margin: 20px 0;
+}
+#home-page main #rates .card li {
+  line-height: 30px;
+  color: #4F5A69;
+}
+#home-page main #rates .card .separation-line {
+  border-color: #E9ECEF;
+}
+#home-page main #rates .card .ribbon {
+  width: 90px;
+  line-height: 30px;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(45deg);
+  text-align: center;
+}
+#home-page main #rates .card .ribbon .ribbon-text {
+  color: white;
+  background-color: #F17425;
+  height: 30px;
+  position: relative;
+  border-right: 2px solid #D55B0E;
+  border-left: 2px solid #D55B0E;
+}
+#home-page main #rates .card .ribbon .ribbon-text .fake-square {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  transform: rotate(45deg);
+}
+#home-page main #rates .card .ribbon .ribbon-text .fake-square.left {
+  top: -15px;
+  left: -17px;
+}
+#home-page main #rates .card .ribbon .ribbon-text .fake-square.right {
+  top: -15px;
+  right: -17px;
 }
 
 * {
