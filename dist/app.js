@@ -12,6 +12,7 @@ function init() {
     el: "#home-page",
     data: {
       scrollPosition: null,
+      scrollpx: 0,
       menuItems: ['LANDING', 'PAGES', 'DOCS'],
       partners: ['amazon', 'google', 'lenovo', 'paypal', 'shopify', 'spotify'],
       cards: [{
@@ -71,7 +72,10 @@ function init() {
       },
       selectItem: function selectItem(item) {
         this.activeStartItem = item;
-        console.log(this.activeStartItem);
+      },
+      scrollTop: function scrollTop() {
+        window.scrollTo(0, 0);
+        console.log("baiaaiaiai");
       }
     },
     mounted: function mounted() {

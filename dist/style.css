@@ -470,6 +470,36 @@
   height: 25px;
   margin-left: 5px;
 }
+#home-page .top-page {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 499;
+  background-color: transparent;
+  display: none;
+}
+#home-page .top-page div {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#home-page .top-page div:hover button {
+  transform: rotate(45deg);
+}
+#home-page .top-page div button {
+  width: 40px;
+  height: 40px;
+}
+#home-page .top-page div i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+#home-page .show {
+  display: block;
+}
 
 * {
   box-sizing: border-box;

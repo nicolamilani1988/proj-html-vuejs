@@ -4,6 +4,7 @@ function init(){
 
         data:{
             scrollPosition: null,
+            scrollpx: 0,
 
             menuItems:['LANDING','PAGES','DOCS'],
             
@@ -83,7 +84,10 @@ function init(){
             },
             selectItem: function(item){
                 this.activeStartItem = item;
-                console.log(this.activeStartItem);
+            },
+            scrollTop: function(){
+                window.scrollTo(0, 0);
+                console.log("baiaaiaiai");
             }
         },
         mounted() {

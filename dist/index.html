@@ -23,7 +23,7 @@
 <body>
     <div id="home-page">
         <!-- fixed section on top -->
-        <header :class="{change_color: scrollPosition > 50}">
+        <header :class="{change_color: scrollPosition > 100}">
             <div class="container">
                 <!-- logo -->
                 <div class="logo" >
@@ -328,6 +328,14 @@
             </section>
 
         </footer>
+
+        <!-- top-page function -->
+        <div class="top-page" :class="{show: scrollPosition > 300}">
+            <div @click= "scrollTop">
+                <button class="squared-button blue"></button>
+                <i class="fas fa-arrow-up"></i>
+            </div> 
+        </div>
 
     </div>     
     

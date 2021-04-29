@@ -108,6 +108,13 @@ $standard-transition: all 0.5s ease;
     flex-direction: column;
 }
 
+@mixin absolute-center{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 //content
 @mixin centered-content{
     text-align: center;
@@ -137,4 +144,41 @@ $standard-transition: all 0.5s ease;
     left: 0;
     right: 0;
     bottom:0;
+}
+
+// ribbon
+@mixin ribbon{
+    width: 75px;
+    height: 75px;
+    position:absolute; 
+    top: -7px;
+    right:-7px; 
+    overflow: hidden!important;
+    .ribbon-text{
+        background-color: $ribbon-color;
+        width: 110px;
+        color: white;
+        text-align: center;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 18px;
+        right: -25px;
+        &:before,&:after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            z-index: -1;
+            border: 4px solid transparent;
+        }
+        &:before{
+            left: 4px;
+            border-left-color: $ribbon-border;
+            border-top-color: $ribbon-border;
+        }
+        &:after{
+            right: 2px;
+            border-right-color: $ribbon-border;
+            border-top-color: $ribbon-border;
+        }
+    }        
 }
