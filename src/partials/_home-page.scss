@@ -85,7 +85,9 @@
                 }
             }
             .actions{
+                
                 .icon{
+                    position: relative;
                     padding: $xxsmall-space;
                     width: 40px;
                     height: 40px;
@@ -98,6 +100,19 @@
                             @include icon-hover;
                             }
                         }
+                }
+                .searchbar{
+                    @include card-style;
+                    width: 300px;
+                    background-color: white;
+                    position: absolute;
+                    top:50px;
+                    right: calc(40% - 30px);
+                    padding: $xsmall-space;
+                    &:hover{
+                        border: 1.5px solid $dark-blue;
+                        transition: $standard-transition;
+                    }
                 }
             }
         }
@@ -120,6 +135,9 @@
                 @include flex-vertical;
                 .link{
                     margin: $xsmall-space 0;
+                    &:hover{
+                        color: $dark-blue;
+                    }
                 }
             }
         }

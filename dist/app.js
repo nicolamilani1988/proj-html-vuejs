@@ -27,6 +27,7 @@ function init() {
         columns: [['DOCUMENTATION', 'CHANGELOG', 'COMPONENTS', 'WIDGET']]
       }],
       activeMenu: null,
+      isSearchbarVisible: false,
       partners: ['amazon', 'google', 'lenovo', 'paypal', 'shopify', 'spotify'],
       cards: [{
         "class": "fas fa-layer-group",

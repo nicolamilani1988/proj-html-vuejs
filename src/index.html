@@ -48,8 +48,11 @@
                 <!-- actions -->
                 <div class="actions">
                     <ul>
-                        <li class="icon search">
+                        <li @click="isSearchbarVisible = !isSearchbarVisible" class="icon search">
                             <i class="fas fa-search"></i>
+                            <div v-if="isSearchbarVisible == true" class="searchbar">
+                                <input type="text" placeholder="Search..">
+                            </div>
                         </li>
                         <li class="icon tool">
                             <i class="fab fa-github"></i>  
@@ -61,12 +64,13 @@
                             <i class="far fa-user"></i>
                         </li>
                     </ul>
+                    
                 </div>
             </div>
         </header>
 
         <!-- jumbotron -->
-        <section id="jumbotron">
+        <section id="jumbotron" @click="isSearchbarVisible = false">
             <div class="container">
                 <!-- description-section -->
                 <div class="section-title">
@@ -104,7 +108,7 @@
         </section>
 
         <!-- main part -->
-        <main>
+        <main @click="isSearchbarVisible = false">
             <!-- MAIN first part: key features -->
             <section id="features">
                 <div class="container">
@@ -267,7 +271,7 @@
         </main>
 
         <!-- last part: FOOTER -->
-        <footer>
+        <footer  @click="isSearchbarVisible = false">
             <!-- FOOTER first part: infos -->
             <section id="infos">
                 <div class="container">
@@ -341,7 +345,7 @@
         </footer>
 
         <!-- top-page function -->
-        <div class="top-page" :class="{show: scrollPosition > 300}">
+        <div class="top-page" :class="{show: scrollPosition > 300}"  @click="isSearchbarVisible = false">
             <div @click= "scrollTop">
                 <button class="squared-button blue"></button>
                 <i class="fas fa-arrow-up"></i>

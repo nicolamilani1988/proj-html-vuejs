@@ -50,6 +50,8 @@ function init(){
 
             ],
             activeMenu: null,
+
+            isSearchbarVisible: false,
             
             partners:['amazon','google','lenovo','paypal','shopify','spotify'],
             cards:[
@@ -164,7 +166,7 @@ function init(){
             },
             showMenu: function(index){
                 this.activeMenu = index;
-            }
+            },
         },
         mounted() {
             window.addEventListener('scroll', this.updateScroll);
