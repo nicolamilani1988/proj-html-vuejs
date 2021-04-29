@@ -27,6 +27,7 @@ function init() {
         columns: [['DOCUMENTATION', 'CHANGELOG', 'COMPONENTS', 'WIDGET']]
       }],
       isMenuVisible: false,
+      activeMenu: null,
       partners: ['amazon', 'google', 'lenovo', 'paypal', 'shopify', 'spotify'],
       cards: [{
         "class": "fas fa-layer-group",
@@ -113,6 +114,9 @@ function init() {
 
           window.scrollTo(0, window.pageYOffset - 50);
         }, 20);
+      },
+      showMenu: function showMenu(index) {
+        this.activeMenu = index;
       }
     },
     mounted: function mounted() {

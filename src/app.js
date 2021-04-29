@@ -50,6 +50,7 @@ function init(){
 
             ],
             isMenuVisible: false,
+            activeMenu: null,
             
             partners:['amazon','google','lenovo','paypal','shopify','spotify'],
             cards:[
@@ -161,6 +162,9 @@ function init(){
                     }
                     window.scrollTo(0, window.pageYOffset - 50);
                 }, 20)            
+            },
+            showMenu: function(index){
+                this.activeMenu = index;
             }
         },
         mounted() {
