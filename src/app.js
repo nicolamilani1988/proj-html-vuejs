@@ -86,8 +86,12 @@ function init(){
                 this.activeStartItem = item;
             },
             scrollTop: function(){
-                window.scrollTo(0, 0);
-                console.log("baiaaiaiai");
+                let clock = setInterval(() =>{
+                    if(window.pageYOffset === 0){
+                        clearInterval(clock);
+                    }
+                    window.scrollTo(0, window.pageYOffset - 50);
+                }, 20)            
             }
         },
         mounted() {

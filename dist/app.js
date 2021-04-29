@@ -74,8 +74,13 @@ function init() {
         this.activeStartItem = item;
       },
       scrollTop: function scrollTop() {
-        window.scrollTo(0, 0);
-        console.log("baiaaiaiai");
+        var clock = setInterval(function () {
+          if (window.pageYOffset === 0) {
+            clearInterval(clock);
+          }
+
+          window.scrollTo(0, window.pageYOffset - 50);
+        }, 20);
       }
     },
     mounted: function mounted() {
