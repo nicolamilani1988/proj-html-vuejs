@@ -3,13 +3,12 @@ function init(){
         el: "#home-page",
 
         data:{
-            scrollPosition: null,
-            scrollpx: 0,
+            scrollPosition: null, //change header color on scroll
             
-            menuItems:[
+            activeMenu: null, //header-dropdpown menu
+            menuItems:[ // links of header ddown menu
                 {
                     name:'LANDING',
-                    class: 'multiple-columns',
                     columns:[
                         [
                             'SAAS','CLASSIC SAAS','AGENCY','APPLICATION','CLASSIC APPLICATION','STUDIO','MARKETING','ENTERPRISE','SERVICE','PAYMENTS','CRYPTOCURRENCY'
@@ -30,7 +29,6 @@ function init(){
                 },
                 {
                     name:'PAGES',
-                    class: 'single-column',
                     columns:[
                         [
                             'COMPANY','ACCOUNT','SHOP','HELP CENTER','FORUMS','EMAIL-TEMPLATE','CAREERS','BLOG','CASE-STUDY','PORTFOLIO','AUTH-PAGES','UTILITY','SPECIAL','CONTACTS'
@@ -39,7 +37,6 @@ function init(){
                 },
                 {
                     name:'DOCS',
-                    class: 'single-column',
                     columns:[
                         [
                             'DOCUMENTATION','CHANGELOG','COMPONENTS','WIDGET'
@@ -49,14 +46,14 @@ function init(){
 
 
             ],
-            activeMenu: null,
 
-            isSearchbarVisible: false,
+            isSearchbarVisible: false, //show searchbar
 
-            isModalVisible: false,
+            isModalVisible: false, // login/register form
             
-            partners:['amazon','google','lenovo','paypal','shopify','spotify'],
-            cards:[
+            partners:['amazon','google','lenovo','paypal','shopify','spotify'], //partners logo
+
+            cards:[ // key features cards
                 {
                     class:"fas fa-layer-group",
                     title: "Modular",
@@ -74,7 +71,8 @@ function init(){
                     title: "Scalable",
                 },
             ],
-            startItems:[
+
+            startItems:[ //host providers
                 {
                     name: 'npm',
                     ready: true,
@@ -102,11 +100,11 @@ function init(){
                     ready: false,           
                 },
             ],
-            activeStartItem : 'npm',
+            activeStartItem : 'npm', //clicked provider
 
-            strengths:['Digital Marketing Solutions for Tomorrow','Our Talented & Experienced Marketing Agency','Create your own skin to match your brand'],
+            strengths:['Digital Marketing Solutions for Tomorrow','Our Talented & Experienced Marketing Agency','Create your own skin to match your brand'], //strength points
 
-            memberships:[
+            memberships:[ //kinds of membership and fare
                 {
                     title:'Basic',
                     rate: '$9.00',
@@ -130,9 +128,9 @@ function init(){
                 },
             ],
 
-            socials:['fab fa-facebook-f','fab fa-instagram','fab fa-twitter','fab fa-linkedin-in'],
+            socials:['fab fa-facebook-f','fab fa-instagram','fab fa-twitter','fab fa-linkedin-in'], //social-network icons
 
-            utilities: [
+            utilities: [ //footer helpful and info links
                 {
                     title: 'Company',
                     links: ['About Us','Services','Team','Pricing','Project','Careers','Blog','Login'],
@@ -147,6 +145,7 @@ function init(){
 
             acceptedPayments: ['american-ex','discover','master-card','paypal','visa'],
         }, 
+
         methods:{
             getImg: function(logo, format){
                 const path = 'img/'+logo+'.' + format;

@@ -20,12 +20,7 @@
         }
     }
 
-    .section-title{
-        @include flex-vertical;
-        justify-content: center;
-    }
-
-    .section-title.center{
+    .section-title-center{
         @include centered-content;
     }  
 
@@ -46,9 +41,6 @@
         @include rounded-labels;
     } 
 
-    .change_color {
-        background-color:white;
-    }
     
     // HEADER
     header{
@@ -61,14 +53,14 @@
         top: 0;
         right: 0;
         left: 0;
-        height: 80px;       
+        height: $header-height;       
         .container{
             justify-content: space-between;
             align-items: center;         
-            ul{
+            ul.horizontal-list{
                 display: flex;
             }
-            nav{
+            nav#navbar-menu{
                 .list-item{
                     margin: 0 $small-space;
                     color: $dark-grey;
@@ -83,16 +75,39 @@
                         }
                     }
                 }
+                .dropdown-menu{
+                    @include card-style;
+                    position: absolute;
+                    top: 50px;
+                    display: flex;
+                    background-color: white;
+                    &.multiple-columns{
+                        right: calc((-1140px / 2) - 50%);
+                        width: 1140px;
+                        justify-content: space-between;
+                    }
+                    &.single-column{
+                        width: 250px;
+                    }
+                    ul{
+                        .link{
+                            margin: $small-space 0;
+                            &:hover{
+                                color: $dark-blue;
+                            }
+                        }
+                    }
+                }
             }
-            .actions{
-                
+
+            #actions{
                 .icon{
+                    @include center-item;
                     position: relative;
                     padding: $xxsmall-space;
                     width: 40px;
                     height: 40px;
-                    margin: 0 $xxsmall-space;
-                    @include center-icon;
+                    margin: 0 $xxsmall-space;       
                     &.tool{
                         @include light-labels-icons;                
                         box-shadow:$box-shadow;
@@ -116,38 +131,17 @@
                 }
             }
         }
-        .dropdown-menu{
-            position: absolute;
-            top: 50px;
-            min-width: 100%;
-            @include card-style;
-            display: flex;
-            background-color: white;
-            &.multiple-columns{
-                right: calc(-1140px / 2);
-                width: 1140px;
-                justify-content: space-between;
-            }
-            &.single-column{
-                width: 250px;
-            }
-            ul{
-                @include flex-vertical;
-                .link{
-                    margin: $xsmall-space 0;
-                    &:hover{
-                        color: $dark-blue;
-                    }
-                }
-            }
-        }
+
     }
 
+    //JUMBOTRON
     #jumbotron{
         background-color: $lighter-grey;
-        margin-top: 80px;
+        margin-top: $header-height;
         padding: $xlarge-space 0;
         .section-title{
+            @include flex-vertical;
+            justify-content: center;
             width: 50%;
             .main-part{
                 margin-top: $small-space;
@@ -178,6 +172,7 @@
         }
     }
 
+    //PARTNER SECTION
     #partners{
         background-color: $lighter-grey;
         padding: $large-space 0;
@@ -192,8 +187,10 @@
         }
     }
 
+    //MAIN
     main{
         padding: $xlarge-space 0;
+        
         #features{
             .container{
                 @include flex-vertical;  
@@ -208,7 +205,7 @@
                     width: calc((100% - 60px) / 4);
                     .card-icon{
                         @include light-labels-icons;
-                        @include center-icon;
+                        @include center-item;
                         padding: $small-space;
                         width: 60px;
                         height: 60px;
@@ -223,7 +220,7 @@
                     .hidden{
                         i{
                             @include absolute-total;
-                            @include center-icon;
+                            @include center-item;
                             color: $bordered-lightgray-buttons;
                             opacity: 0;
                         }
@@ -244,15 +241,12 @@
             padding: $large-space 0;
             .mini-container{
                 padding: $normal-space 0;
-                width: 40%;
+                width: 700px;
                 margin: auto;
                 .grey-container{
                     background-color: $dark-grey;
                     padding: $small-space $small-space $xlarge-space;
                     border-radius: 10px;
-                    h3{
-                        color: white;
-                    }
                     ul{
                         display: flex;
                         justify-content: space-between;
@@ -265,7 +259,10 @@
                             border-radius: 10px;
                             text-align: center;
                             padding: $xsmall-space 0;  
-                            cursor: pointer;                    
+                            cursor: pointer; 
+                            h3{
+                                color: white;
+                            }                   
                         }
                         li.active{
                             background-color: $dark-grey;
@@ -284,7 +281,6 @@
                         margin-right: $normal-space;
                     }
                 }
-                
             }
         }
 
@@ -299,11 +295,13 @@
                     }
                 }
                 .section-title{
+                    @include flex-vertical;
+                    justify-content: center;
                     >*{
                         padding: $xsmall-space 0;
                     }
                     li{
-                        line-height: 30px;
+                        margin: $xsmall-space 0;
                     }
                 }   
             }
@@ -325,7 +323,7 @@
                     margin: $small-space 0;
                 }
                 li{
-                    line-height: 30px;
+                    margin: $xsmall-space 0;
                     color: $mouse-grey;
                 }
                 .ribbon{
@@ -339,8 +337,10 @@
                 }
             }
         }
+
         #join-us{
             .email-input{
+                margin: $normal-space 0;
                 display: flex;
                 justify-content: space-between;
                 border-radius: 20px;
@@ -362,12 +362,13 @@
         }
     }
 
+    //FOOTER
     footer{
         background-color: $bg-dark;
+
         #infos{
             padding: $large-space 0;
             .container{
-                justify-content: space-between;
                 h3{
                     color: white;
                     margin-bottom: $small-space;
@@ -384,7 +385,7 @@
                     ul.social-networks{
                         display: flex;
                         .icon.social-network{
-                            @include center-icon;
+                            @include center-item;
                             padding: 15px;
                             margin-right: $xsmall-space;
                             width: 25px;
@@ -446,6 +447,7 @@
                 }
             }     
         }
+
         #credits{
             .container{
                 justify-content: space-between;
@@ -460,110 +462,4 @@
             }
         }
     }
-    
-    .top-page{
-        position: fixed;
-        bottom: 50px;
-        right: 50px;
-        z-index: 499;
-        background-color: transparent;
-        display: none;
-        div{
-            position: relative;
-            cursor: pointer;
-            transition: $standard-transition;
-            &:hover{
-                button{
-                    transform: rotate(45deg);
-                }           
-            }
-            button{
-                width: 40px;
-                height: 40px;
-            }
-            i{
-                @include absolute-center;
-                color: white;
-            }
-        }      
-    }
-    .show{
-        display: block;
-    }
-
-    .modal{
-        z-index: 998;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        .mini-container{
-            @include absolute-center;
-            display: flex;
-            width: 800px;
-            border-radius: 10px;
-            background-color: white;
-            img{
-                height: 100%;
-                border-radius: 10px;
-            }
-            .inputs{
-                @include flex-vertical;
-                justify-content: center;
-                border-radius: 10px;
-                padding: $small-space;
-                width: 50%;
-                position: relative;
-                >*{
-                    padding: $xsmall-space 0;
-                }
-                .input-form{
-                    @include email-form;
-                    border: 1.5px solid $bordered-lightgray-buttons;
-                }
-                .check-help{
-                    display: flex;
-                    justify-content: space-between;
-                }
-                button{
-                    width: 100%;
-                }
-                .sign-up{
-                    text-align: center;
-                }
-                .close{
-                    color: $standard-text-grey;
-                    position: absolute;
-                    right: $small-space;
-                    top: 0;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-
-    .change-color{
-        cursor: pointer;
-        padding: $xxsmall-space;
-        text-align: right;
-        width: 100px;
-        height: 50px;
-        border: 1.5px solid $border-light-gray;
-        border-radius: 40px;
-        position: fixed;
-        top:200px;
-        left: -40px;
-        z-index: 999;
-        background-color: white;
-        i{
-            animation: loading 2s linear infinite;
-        }
-        @keyframes loading{
-            0% {transform:rotate(0);}
-            100% {transform:rotate(-1turn);}
-          }
-    }
-        
 }

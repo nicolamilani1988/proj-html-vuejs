@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landrick - Saas & Software Landing Page Template</title>
-    <!-- font awesome --> 
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,48 +29,123 @@
                 <div class="logo" >
                     <img src="img/logo-dark.png" alt="">
                 </div>
-                <!-- navbar  VUEJS--> 
-                <nav>
-                    <ul>
+                <!-- navbar  VUEJS-->
+                <nav id="navbar-menu">
+                    <ul class="horizontal-list">
+                        <!-- link home -->
                         <li class="list-item thin-text"><a href=""><strong>HOME</strong></a></li>
-                        <li class="list-item thin-text" v-for="(item,index) in menuItems">
-                            <a href=""><strong @mouseenter="showMenu(index)">{{item['name']}}<i class="fas fa-chevron-down"></i></strong></a>
-                            <div :class="item['class']" class="dropdown-menu" v-if="index == activeMenu">
+                        <!-- links with dropdown-menu ON HOVER -->
+                        <li @mouseenter="showMenu(index)" class="list-item thin-text" v-for="(item,index) in menuItems">
+                            <!-- title -->
+                            <a href=""><strong>{{item['name']}}<i class="fas fa-chevron-down"></i></strong></a>
+                            <!-- dropdown-menu -->
+                            <div :class="item['columns'].length>1 ? 'multiple-columns' : 'single-column'" class="dropdown-menu" v-if="index == activeMenu">
                                 <ul class="small-text" v-for="column in item['columns']">
                                     <li class="link" v-for="(link,index) in column">
                                         <strong><a href="">{{column[index]}}</a></strong>
-                                    </li>              
+                                    </li>
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </nav>
                 <!-- actions -->
-                <div class="actions">
-                    <ul>
-                        <li @click="isSearchbarVisible = !isSearchbarVisible" class="icon search">
-                            <i class="fas fa-search"></i>
-                            <div v-if="isSearchbarVisible == true" class="searchbar">
+                <section id="actions">
+                    <ul class="horizontal-list">
+                        <!-- searchbar ON CLICK -->
+                        <li class="icon search">
+                            <i @click="isSearchbarVisible = !isSearchbarVisible" class="fas fa-search"></i>
+                            <div v-if="isSearchbarVisible == true" class="searchbar" @mouseleave="isSearchbarVisible = false">
                                 <input type="text" placeholder="Search..">
                             </div>
                         </li>
+                        <!-- other icons -->
                         <li class="icon tool">
-                            <i class="fab fa-github"></i>  
+                            <i class="fab fa-github"></i>
                         </li>
                         <li class="icon tool">
                             <i class="fab fa-stack-overflow"></i>
                         </li>
+                        <!-- login or register ON CLICK -->
                         <li class="icon tool" @click="isModalVisible = true">
                             <i class="far fa-user"></i>
                         </li>
                     </ul>
-                    
-                </div>
+                </section>
+
             </div>
+
+            <!-- login or registration form -->
+            <transition name="fade">
+                <div class="modal black-text" v-if="isModalVisible">
+                    <div class="mini-container">
+                        <!-- image -->
+                        <div>
+                            <img src="img/ab02.jpg" alt="">
+                        </div>
+                        <!-- login form -->
+                        <form class="inputs">
+                            <!-- email -->
+                            <div>
+                                <div>
+                                    <label for="email">
+                                        <p class="thin-text"><strong> Your Email<span class="red-text">*</span></strong></p>
+                                    </label>
+                                </div>
+                                <div class="input-form">
+                                    <i class="far fa-user"></i>
+                                    <input id="user-email" type="email" placeholder="Your Email:" required>
+                                </div>
+                            </div>
+                            <!-- password -->
+                            <div>
+                                <div>
+                                    <label for="password">
+                                        <p class="thin-text"><strong> Password<span class="red-text">*</span></strong></p>
+                                    </label>
+                                </div>
+                                <div class="input-form">
+                                    <i class="fas fa-unlock-alt"></i>
+                                    <input type="password" placeholder="Password" required>
+                                </div>
+                            </div>
+                            <!-- check and help -->
+                            <div class="check-help">
+                                <div>
+                                    <input type="checkbox" name="" id="">
+                                    <span>Remember me</span>
+                                </div>
+                                <div>
+                                    <strong><a href="">Forgot Password ?</a></strong>
+                                </div>
+                            </div>
+                            <!-- sign-in button -->
+                            <div>
+                                <button class="big-text squared-button blue">
+                                    Sign in
+                                </button>
+                            </div>
+                            <!-- new account -->
+                            <div class="sign-up">
+                                <span>Don't have an account? </span>
+                                <strong><a href=""> Sign Up</a></strong>
+                            </div>
+                            <!-- close-panel -->
+                            <div class="close">
+                                <i  @click="isModalVisible = false" class="fas fa-times fa-2x"></i>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </transition>
+
         </header>
 
+
         <!-- jumbotron -->
-        <section id="jumbotron" @click="isSearchbarVisible = false">
+        <section id="jumbotron">
             <div class="container">
                 <!-- description-section -->
                 <div class="section-title">
@@ -104,11 +179,11 @@
                 <div class="partner" v-for="logo in partners">
                     <img :src="getImg(logo,'svg')" alt="">
                 </div>
-            </div> 
+            </div>
         </section>
 
         <!-- main part -->
-        <main @click="isSearchbarVisible = false">
+        <main>
             <!-- MAIN first part: key features -->
             <section id="features">
                 <div class="container">
@@ -120,10 +195,11 @@
                     <!-- 4 cards -->
                     <div class="cards-container">
                         <div class="card" v-for="card in cards">
+                            <!-- big background-icon on hover -->
                             <div class="hidden">
                                 <i class="fa-10x" :class="card['class']"></i>
                             </div>
-                            <!-- prima carta -->
+                            <!-- card -->
                             <div class="card-icon">
                                 <i :class="card['class']"></i>
                             </div>
@@ -135,30 +211,32 @@
                                 <a href="" class="blue-text">Read More<i class="fas fa-chevron-right"></i></a>
                             </div>
                         </div>
-                        <!-- ... -->     
+                        <!-- ... -->
                     </div>
 
-                </div>                   
+                </div>
             </section>
 
             <!-- MAIN second part: quickstart -->
             <section id="quickstart">
                 <!-- description -->
-                <div class="section-title center">
+                <div class="section-title-center">
                     <div class="blue-text">Quickstart</div>
                     <h2>Awesome isn't it? Let's dive in!</h2>
                     <p>Start working with <span class="blue-text"><strong>Landrick</strong></span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
-                </div>  
+                </div>
                 <!-- tools block -->
                 <div class="mini-container">
                     <!-- grey part -->
                     <div class="grey-container">
                         <ul>
+                            <!-- host providers CHANGES ON CLICK -->
                             <li @click="selectItem(item)" class="big-text" v-for="item in startItems" :class="activeStartItem == item['name'] ? 'active' : ''">
                                 <h3>{{item['name']}}</h3>
+                                <!-- provider features -->
                                 <transition name="fade">
                                     <div v-if="activeStartItem == item['name']" class="tips">
-                                        
+
                                         <span v-if="item['ready'] == true" v-for="feature in item['features']"><strong><span class="green-text">{{feature['symbol']}} </span><span>{{feature['technology']}} </span></strong>
                                         </span>
 
@@ -167,7 +245,8 @@
                                     </div>
                             </transition>
                             </li>
-                        </ul>                         
+
+                        </ul>
                     </div>
                     <!-- didascalic part -->
                     <div class="didascalic">
@@ -175,7 +254,7 @@
                         <span><i class="green-text far fa-check-circle"></i>Work with any team</span>
                     </div>
                 </div>
-                
+
             </section>
 
             <!-- MAIN third part: build -->
@@ -184,14 +263,15 @@
                     <!-- description -->
                     <div class="section-title">
                         <h2>Build tools and
-                            extensive documention
-                        </h2>
+                            extensive documention</h2>
                         <p>You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.</p>
+                        <!-- list item -->
                         <ul>
                             <li v-for="strength in strengths">
                                 <span><i class="blue-text far fa-check-circle"></i>{{strength}}</span>
                             </li>
                         </ul>
+
                         <div>
                             <button class="big-text squared-button blue">Read More <small><i class="fas fa-arrow-right"></i></small></button>
                         </div>
@@ -206,7 +286,7 @@
             <!-- MAIN fourth part: rates -->
             <section id="rates">
                 <!-- description -->
-                <div class="section-title center">
+                <div class="section-title-center">
                     <h2>Our rates for developer from landrick team</h2>
                     <p>Start working with <span class="blue-text"><strong>Landrick</strong></span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
                 </div>
@@ -227,7 +307,7 @@
                             </div>
                             <!-- riga separazione -->
                             <div class="separation-line"></div>
-                            <!-- checkbox list VUEJS -->
+                            <!-- checklist VUEJS -->
                             <div>
                                 <ul>
                                     <li v-for="bulletPoint in membership['bulletPoints']"><i class="blue-text far fa-check-circle"></i>{{bulletPoint}}</li>
@@ -237,23 +317,23 @@
                                 <div class="squared-button blue">Buy Now</div>
                                 <p>*No credit card required</p>
                             </div>
+                            <!-- organge ribbon -->
                             <div v-if="membership['title'] == 'Business'" class="ribbon">
                                 <div class="ribbon-text">
                                     Best
                                 </div>
                             </div>
-                            
                         </div>
                         <!-- ... -->
                     </div>
-                        
+
                 </div>
             </section>
 
             <!-- MAIN fifth part: join-us -->
             <section id="join-us">
 
-                <div class="section-title center">
+                <div class="section-title-center">
                     <h2>Want to be among the first to find out?</h2>
                     <p>Start working with <span class="blue-text"><strong>Landrick</strong></span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
                     <form class="email-input">
@@ -262,16 +342,17 @@
                         </div>
                         <div>
                             <button class="squared-button blue">Get Started</button>
-                        </div>              
+                        </div>
                     </form>
                 </div>
-                
+
             </section>
 
         </main>
+        
 
         <!-- last part: FOOTER -->
-        <footer  @click="isSearchbarVisible = false">
+        <footer>
             <!-- FOOTER first part: infos -->
             <section id="infos">
                 <div class="container">
@@ -298,7 +379,7 @@
                         <ul>
                             <li class="info-links" v-for="link in utility['links']"><a href=""><i class="fas fa-chevron-right"></i> {{link}}</a></li>
                         </ul>
-                    </div>                
+                    </div>
                     <!-- fourth column -->
                     <div class="medium newsletter">
                         <form>
@@ -307,7 +388,7 @@
                             <div>
                                 <label for="email">
                                     <p class="thin-text"><strong>Write your email<span class="red-text">*</span></strong></p>
-                                </label>      
+                                </label>
                             </div>
                             <div class="email-form">
                                 <i class="far fa-envelope"></i>
@@ -323,7 +404,7 @@
                 </div>
             </section>
 
-            <div class="separation-line"></div>
+            <div class="separation-line-blue"></div>
 
             <!-- FOOTER second part: credits -->
             <section id="credits">
@@ -344,82 +425,20 @@
 
         </footer>
 
-        <!-- top-page function -->
-        <div class="top-page" :class="{show: scrollPosition > 300}"  @click="isSearchbarVisible = false">
+        <!-- top-page function ON CLICK -->
+        <div class="top-page" :class="{show: scrollPosition > 300}">
             <div @click= "scrollTop">
                 <button class="squared-button blue"></button>
                 <i class="fas fa-arrow-up"></i>
-            </div> 
-        </div>
-
-        <!-- registration form -->
-        <transition name="fade">
-            <div class="modal black-text" v-if="isModalVisible">
-                <div class="mini-container">
-                    <div>
-                        <img src="img/ab02.jpg" alt="">
-                    </div>
-                    <div class="inputs">
-                        <!-- email -->
-                        <div>
-                            <div>
-                                <label for="email">
-                                    <p class="thin-text"><strong> Your Email<span class="red-text">*</span></strong></p>
-                                </label>    
-                            </div>
-                            <div class="input-form">
-                                <i class="far fa-user"></i>  
-                                <input id="user-email" type="email" placeholder="Your Email:" required>
-                            </div>
-                        </div>
-                        <!-- password -->
-                        <div>
-                            <div>
-                                <label for="password">
-                                    <p class="thin-text"><strong> Password<span class="red-text">*</span></strong></p>
-                                </label>    
-                            </div>
-                            <div class="input-form">
-                                <i class="fas fa-unlock-alt"></i>  
-                                <input type="password" placeholder="Password" required>
-                            </div>
-                        </div>
-                        <!-- check and help -->
-                        <div class="check-help">
-                            <div>
-                                <input type="checkbox" name="" id="">
-                                <span>Remember me</span>
-                            </div>
-                            <div>
-                                <strong><a href="">Forgot Password ?</a></strong>
-                            </div>
-                        </div>
-                        <!-- sign-in button -->
-                        <div>
-                            <button class="big-text squared-button blue">
-                                Sign in
-                            </button>            
-                        </div>
-                        <!-- new account -->
-                        <div class="sign-up">
-                            <span>Don't have an account?   </span>
-                            <strong><a href="">   Sign Up</a></strong>
-                        </div>
-                        <!-- close-panel -->
-                        <div class="close">
-                            <i  @click="isModalVisible = false" class="fas fa-times fa-2x"></i>
-                        </div>
-                            
-                    </div>
-                </div>
             </div>
-        </transition>
-        
-        <div class="change-color">
-                <i class="blue-text fas fa-cog fa-2x"></i>
         </div>
 
-    </div>     
-    
+        <!-- settings icon on left side -->
+        <div class="my-settings">
+            <i class="blue-text fas fa-cog fa-2x"></i>
+        </div>
+
+    </div>
+
 </body>
 </html>

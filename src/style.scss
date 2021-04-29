@@ -43,6 +43,7 @@ body{
         background-color: transparent;
     }
 
+    // CLASSI
     .small-text{
         font-size: $smaller-font;
     }
@@ -79,11 +80,131 @@ body{
         border-top: 1.5px solid $border-light-gray;
     }
 
+    div.separation-line-blue{
+        border-top: 1.5px solid $night-blue;
+    }
+
+    // VUE TRANSITION
     .fade-enter-active, .fade-leave-active, .fade-enter {
         transition: opacity 0.5s;
     }
     .fade-enter, .fade-leave-to{
         opacity: 0;
+    }
+
+    //VUE CLASS
+    .change_color {
+        background-color:white;
+    }
+
+
+    // Scroll to Top icon
+    .top-page{
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        z-index: 499;
+        background-color: transparent;
+        display: none;
+        div{
+            position: relative;
+            cursor: pointer;
+            transition: $standard-transition;
+            &:hover{
+                button{
+                    transform: rotate(45deg);
+                }           
+            }
+            button{
+                width: 40px;
+                height: 40px;
+            }
+            i{
+                @include absolute-center;
+                color: white;
+            }
+        }      
+    }
+    .show{
+        display: block;
+    }
+
+
+    //modal for login or registration
+    .modal{
+        z-index: 998;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        .mini-container{
+            @include absolute-center;
+            display: flex;
+            width: 800px;
+            border-radius: 10px;
+            background-color: white;
+            img{
+                height: 100%;
+                border-radius: 10px;
+            }
+            .inputs{
+                @include flex-vertical;
+                justify-content: center;
+                border-radius: 10px;
+                padding: $small-space;
+                width: 50%;
+                position: relative;
+                >*{
+                    padding: $xsmall-space 0;
+                }
+                .input-form{
+                    @include email-form;
+                    border: 1.5px solid $bordered-lightgray-buttons;
+                }
+                .check-help{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                button{
+                    width: 100%;
+                }
+                .sign-up{
+                    text-align: center;
+                }
+                .close{
+                    color: $standard-text-grey;
+                    position: absolute;
+                    right: $small-space;
+                    top: 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    //settings icon
+    .my-settings{
+        cursor: pointer;
+        padding: $xxsmall-space;
+        text-align: right;
+        width: 100px;
+        height: 50px;
+        border: 1.5px solid $border-light-gray;
+        border-radius: 40px;
+        position: fixed;
+        top:200px;
+        left: -40px;
+        z-index: 999;
+        background-color: white;
+        i{
+            animation: loading 2s linear infinite;
+        }
+        @keyframes loading{
+            0% {transform:rotate(0);}
+            100% {transform:rotate(-1turn);}
+          }
     }
 
 }

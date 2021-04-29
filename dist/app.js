@@ -12,25 +12,28 @@ function init() {
     el: "#home-page",
     data: {
       scrollPosition: null,
-      scrollpx: 0,
-      menuItems: [{
+      //change header color on scroll
+      activeMenu: null,
+      //header-dropdpown menu
+      menuItems: [// links of header ddown menu
+      {
         name: 'LANDING',
-        "class": 'multiple-columns',
         columns: [['SAAS', 'CLASSIC SAAS', 'AGENCY', 'APPLICATION', 'CLASSIC APPLICATION', 'STUDIO', 'MARKETING', 'ENTERPRISE', 'SERVICE', 'PAYMENTS', 'CRYPTOCURRENCY'], ['IT SOLUTIONS', 'BUSINESS', 'MODERN BUSINESSES', 'CORPORATE BUSINESS', 'HOTEL', 'CONSTRUCTION', 'REAL ESTATE', 'DEVELOPER', 'SEO AGENCY', 'HOSPITAL', 'HOSTING & DOMAIN'], ['FINANCE', 'VIDEO CONFERENCE', 'IT SOLUTION TWO', 'FREELANCE', 'BLOCKCHAIN', 'CRYPTOCURRENCY TWO', 'INTEGRATION', 'TASK MANAGEMENT', 'EMAIL INBOX', 'TRAVEL', 'BLOG'], ['LANDING ONE', 'LANDING TWO', 'LANDING THREE', 'LANDING FOUR', 'SHOP', 'INSURANCE', 'ONLINE LEARNING', 'PERSONAL', 'COWORKING', 'COURSE', 'FORUM'], ['EVENT', 'PRODUCT', 'PORTFOLIO', 'JOB', 'SOCIAL MEDIA', 'DIGITAL AGENCY', 'CAR RIDE', 'CUSTOMER', 'SOFTWARE', 'E-BOOK', 'SAAS']]
       }, {
         name: 'PAGES',
-        "class": 'single-column',
         columns: [['COMPANY', 'ACCOUNT', 'SHOP', 'HELP CENTER', 'FORUMS', 'EMAIL-TEMPLATE', 'CAREERS', 'BLOG', 'CASE-STUDY', 'PORTFOLIO', 'AUTH-PAGES', 'UTILITY', 'SPECIAL', 'CONTACTS']]
       }, {
         name: 'DOCS',
-        "class": 'single-column',
         columns: [['DOCUMENTATION', 'CHANGELOG', 'COMPONENTS', 'WIDGET']]
       }],
-      activeMenu: null,
       isSearchbarVisible: false,
+      //show searchbar
       isModalVisible: false,
+      // login/register form
       partners: ['amazon', 'google', 'lenovo', 'paypal', 'shopify', 'spotify'],
-      cards: [{
+      //partners logo
+      cards: [// key features cards
+      {
         "class": "fas fa-layer-group",
         title: "Modular"
       }, {
@@ -43,7 +46,8 @@ function init() {
         "class": "fas fa-expand-arrows-alt",
         title: "Scalable"
       }],
-      startItems: [{
+      startItems: [//host providers
+      {
         name: 'npm',
         ready: true,
         features: [{
@@ -64,8 +68,11 @@ function init() {
         ready: false
       }],
       activeStartItem: 'npm',
+      //clicked provider
       strengths: ['Digital Marketing Solutions for Tomorrow', 'Our Talented & Experienced Marketing Agency', 'Create your own skin to match your brand'],
-      memberships: [{
+      //strength points
+      memberships: [//kinds of membership and fare
+      {
         title: 'Basic',
         rate: '$9.00',
         period: 'Per Month',
@@ -85,7 +92,9 @@ function init() {
         bulletPoints: ['Full Access', 'Enhanced Security', 'Source File', '1 Domain Free', 'Enhanced Security']
       }],
       socials: ['fab fa-facebook-f', 'fab fa-instagram', 'fab fa-twitter', 'fab fa-linkedin-in'],
-      utilities: [{
+      //social-network icons
+      utilities: [//footer helpful and info links
+      {
         title: 'Company',
         links: ['About Us', 'Services', 'Team', 'Pricing', 'Project', 'Careers', 'Blog', 'Login'],
         width: 'small'

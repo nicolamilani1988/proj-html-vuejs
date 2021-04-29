@@ -8,6 +8,8 @@ $large-space: 50px;
 $xlarge-space: 80px;
 $xxlarge-space: 100px;
 
+$header-height: 80px;
+
 
 //colori
 $lighter-grey: #F8F9FC;
@@ -55,13 +57,7 @@ $standard-transition: all 0.5s ease;
     border: 1.5px solid $light-grey;
 }
 
-@mixin center-icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 5px;
-}
+
 
 @mixin icon-hover{
     background-color: $dark-blue;
@@ -119,7 +115,7 @@ $standard-transition: all 0.5s ease;
 //content
 @mixin centered-content{
     text-align: center;
-    width: 30%;
+    width: 600px;
     margin: auto;
     >h2,p{
         padding: $xsmall-space 0;
@@ -145,6 +141,14 @@ $standard-transition: all 0.5s ease;
     left: 0;
     right: 0;
     bottom:0;
+}
+
+@mixin center-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 // ribbon
