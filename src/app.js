@@ -49,7 +49,6 @@ function init(){
 
 
             ],
-            isMenuVisible: false,
             activeMenu: null,
             
             partners:['amazon','google','lenovo','paypal','shopify','spotify'],

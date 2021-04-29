@@ -23,7 +23,7 @@
 <body>
     <div id="home-page">
         <!-- fixed section on top -->
-        <header :class="{change_color: scrollPosition > 100}">
+        <header :class="{change_color: scrollPosition > 100}" @mouseleave="activeMenu = null">
             <div class="container">
                 <!-- logo -->
                 <div class="logo" >

@@ -26,7 +26,6 @@ function init() {
         "class": 'single-column',
         columns: [['DOCUMENTATION', 'CHANGELOG', 'COMPONENTS', 'WIDGET']]
       }],
-      isMenuVisible: false,
       activeMenu: null,
       partners: ['amazon', 'google', 'lenovo', 'paypal', 'shopify', 'spotify'],
       cards: [{

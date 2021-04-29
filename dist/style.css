@@ -121,13 +121,11 @@
   background-color: white;
 }
 #home-page header .dropdown-menu.multiple-columns {
-  border: 1px solid green;
   right: calc(-1140px / 2);
   width: 1140px;
   justify-content: space-between;
 }
 #home-page header .dropdown-menu.single-column {
-  border: 1px solid red;
   width: 250px;
 }
 #home-page header .dropdown-menu ul {
