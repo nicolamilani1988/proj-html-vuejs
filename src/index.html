@@ -143,16 +143,20 @@
                     <!-- grey part -->
                     <div class="grey-container">
                         <ul>
-                            <li @click="selectItem(item)" class="big-text" v-for="item in startItems" :class="activeStartItem == item ? 'active' : ''">
-                                <h3>{{item}}</h3>
-                            </li>
-                        </ul>
-                        <div class="tips">
-                            <transition name="fade">
-                                <p key=1 v-if="activeStartItem == 'npm'"><strong><span class="green-text">$</span> npm install <span class="green-text">-g</span> claps.js</strong></p>
-                                <p key=2 v-else><strong>coming soon ...</strong></p>
+                            <li @click="selectItem(item)" class="big-text" v-for="item in startItems" :class="activeStartItem == item['name'] ? 'active' : ''">
+                                <h3>{{item['name']}}</h3>
+                                <transition name="fade">
+                                    <div v-if="activeStartItem == item['name']" class="tips">
+                                        
+                                        <span v-if="item['ready'] == true" v-for="feature in item['features']"><strong><span class="green-text">{{feature['symbol']}} </span><span>{{feature['technology']}} </span></strong>
+                                        </span>
+
+                                        <span v-if="item['ready'] == false"><strong><span>coming soon...</span></strong></span>
+
+                                    </div>
                             </transition>
-                        </div>    
+                            </li>
+                        </ul>                         
                     </div>
                     <!-- didascalic part -->
                     <div class="didascalic">

@@ -205,7 +205,7 @@
                 margin: auto;
                 .grey-container{
                     background-color: $dark-grey;
-                    padding: $small-space;
+                    padding: $small-space $small-space $xlarge-space;
                     border-radius: 10px;
                     h3{
                         color: white;
@@ -216,6 +216,7 @@
                         border: 1.5px solid $standard-text-grey;
                         border-radius: 10px;
                         background-color: $mouse-grey;
+                        position: relative;
                         li{
                             width: 25%;
                             border-radius: 10px;
@@ -229,9 +230,9 @@
                         }
                     }
                     .tips{
-                        >p{
-                            padding: $small-space 0 $xsmall-space;
-                        }
+                        position: absolute;
+                        bottom: -50px;
+                        left: 0px;
                     }
                 }
                 .didascalic{

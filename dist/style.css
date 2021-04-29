@@ -224,7 +224,7 @@
 }
 #home-page main #quickstart .mini-container .grey-container {
   background-color: #3C4858;
-  padding: 20px;
+  padding: 20px 20px 80px;
   border-radius: 10px;
 }
 #home-page main #quickstart .mini-container .grey-container h3 {
@@ -236,6 +236,7 @@
   border: 1.5px solid #8492A6;
   border-radius: 10px;
   background-color: #4F5A69;
+  position: relative;
 }
 #home-page main #quickstart .mini-container .grey-container ul li {
   width: 25%;
@@ -248,8 +249,10 @@
   background-color: #3C4858;
   transition: all 0.5s ease;
 }
-#home-page main #quickstart .mini-container .grey-container .tips > p {
-  padding: 20px 0 10px;
+#home-page main #quickstart .mini-container .grey-container .tips {
+  position: absolute;
+  bottom: -50px;
+  left: 0px;
 }
 #home-page main #quickstart .mini-container .didascalic {
   padding: 20px 0;
@@ -560,10 +563,9 @@ body .red-text {
 body div.separation-line {
   border-top: 1.5px solid #E9ECEF;
 }
-body .fade-enter-active {
+body .fade-enter-active, body .fade-leave-active, body .fade-enter {
   transition: opacity 0.5s;
 }
-body .fade-enter,
-body .fade-leave-to, body .fade-leave-active {
+body .fade-enter, body .fade-leave-to {
   opacity: 0;
 }

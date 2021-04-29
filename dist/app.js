@@ -28,7 +28,26 @@ function init() {
         "class": "fas fa-expand-arrows-alt",
         title: "Scalable"
       }],
-      startItems: ['npm', 'nuget', 'spm', 'github'],
+      startItems: [{
+        name: 'npm',
+        ready: true,
+        features: [{
+          symbol: '$',
+          technology: 'npm install'
+        }, {
+          symbol: '-g',
+          technology: 'claps.js'
+        }]
+      }, {
+        name: 'nuget',
+        ready: false
+      }, {
+        name: 'spm',
+        ready: false
+      }, {
+        name: 'github',
+        ready: false
+      }],
       activeStartItem: 'npm',
       strengths: ['Digital Marketing Solutions for Tomorrow', 'Our Talented & Experienced Marketing Agency', 'Create your own skin to match your brand'],
       memberships: [{
@@ -71,7 +90,7 @@ function init() {
         this.scrollPosition = window.scrollY;
       },
       selectItem: function selectItem(item) {
-        this.activeStartItem = item;
+        this.activeStartItem = item['name'];
       },
       scrollTop: function scrollTop() {
         var clock = setInterval(function () {

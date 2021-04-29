@@ -27,8 +27,34 @@ function init(){
                     title: "Scalable",
                 },
             ],
-
-            startItems:['npm','nuget','spm','github'],
+            startItems:[
+                {
+                    name: 'npm',
+                    ready: true,
+                    features:[
+                        {
+                            symbol: '$',
+                            technology: 'npm install'
+                        },
+                        {
+                            symbol: '-g',
+                            technology: 'claps.js'
+                        },
+                    ],            
+                },
+                {
+                    name: 'nuget',
+                    ready: false,           
+                },
+                {
+                    name: 'spm',
+                    ready: false,           
+                },
+                {
+                    name: 'github',
+                    ready: false,           
+                },
+            ],
             activeStartItem : 'npm',
 
             strengths:['Digital Marketing Solutions for Tomorrow','Our Talented & Experienced Marketing Agency','Create your own skin to match your brand'],
@@ -83,7 +109,7 @@ function init(){
                 this.scrollPosition = window.scrollY;
             },
             selectItem: function(item){
-                this.activeStartItem = item;
+                this.activeStartItem = item['name'];
             },
             scrollTop: function(){
                 let clock = setInterval(() =>{

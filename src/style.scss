@@ -75,13 +75,11 @@ body{
         border-top: 1.5px solid $border-light-gray;
     }
 
-    .fade-enter-active {
-        transition: opacity .5s
+    .fade-enter-active, .fade-leave-active, .fade-enter {
+        transition: opacity 0.5s;
     }
-
-    .fade-enter,
-    .fade-leave-to, .fade-leave-active {
-        opacity: 0
+    .fade-enter, .fade-leave-to{
+        opacity: 0;
     }
 
 }
