@@ -13,7 +13,16 @@ function init() {
     data: {
       scrollPosition: null,
       scrollpx: 0,
-      menuItems: ['LANDING', 'PAGES', 'DOCS'],
+      menuItems: [{
+        name: 'LANDING',
+        "class": 'multiple-columns',
+        columns: [['SAAS', 'CLASSIC SAAS', 'AGENCY', 'APPLICATION', 'CLASSIC APPLICATION', 'STUDIO', 'MARKETING', 'ENTERPRISE', 'SERVICE', 'PAYMENTS', 'CRYPTOCURRENCY'], ['IT SOLUTIONS', 'BUSINESS', 'MODERN BUSINESSES', 'CORPORATE BUSINESS', 'HOTEL', 'CONSTRUCTION', 'REAL ESTATE', 'DEVELOPER', 'SEO AGENCY', 'HOSPITAL', 'HOSTING & DOMAIN'], ['FINANCE', 'VIDEO CONFERENCE', 'IT SOLUTION TWO', 'FREELANCE', 'BLOCKCHAIN', 'CRYPTOCURRENCY TWO', 'INTEGRATION', 'TASK MANAGEMENT', 'EMAIL INBOX', 'TRAVEL', 'BLOG'], ['SAAS', 'CLASSIC SAAS', 'AGENCY', 'APPLICATION', 'CLASSIC APPLICATION', 'STUDIO', 'MARKETING', 'ENTERPRISE', 'SERVICE', 'PAYMENTS', 'CRYPTOCURRENCY']]
+      }, {
+        name: 'PAGES',
+        "class": 'single-column',
+        columns: [['SAAS', 'CLASSIC SAAS', 'AGENCY', 'APPLICATION', 'CLASSIC APPLICATION', 'STUDIO', 'MARKETING', 'ENTERPRISE', 'SERVICE', 'PAYMENTS', 'CRYPTOCURRENCY']]
+      }],
+      //menuItems:['LANDING','PAGES','DOCS'],
       partners: ['amazon', 'google', 'lenovo', 'paypal', 'shopify', 'spotify'],
       cards: [{
         "class": "fas fa-layer-group",

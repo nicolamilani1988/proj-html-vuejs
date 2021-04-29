@@ -72,12 +72,19 @@
                 .list-item{
                     margin: 0 $small-space;
                     color: $dark-grey;
+                    position: relative;
                     &:hover{
-                        color: $dark-blue;
-                        i{
-                            transition: $standard-transition;
-                            transform: rotate(180deg);
+                        >a{
+                            color: $dark-blue;
+                            i{
+                                transition: $standard-transition;
+                                transform: rotate(180deg);
+                            }
                         }
+                        >.dropdown-menu{
+                            visibility: visible;
+                        }
+                            
                     }
                 }
             }
@@ -95,6 +102,31 @@
                             @include icon-hover;
                             }
                         }
+                }
+            }
+        }
+        .dropdown-menu{
+            position: absolute;
+            top: 50px;
+            min-width: 100%;
+            @include card-style;
+            display: flex;
+            background-color: white;
+            visibility: hidden;
+            &.multiple-columns{
+                border: 1px solid green;
+                right: calc(-1140px / 2);
+                width: 1140px;
+                justify-content: space-between;
+            }
+            &.single-column{
+                border: 1px solid red;
+                width: 250px;
+            }
+            ul{
+                @include flex-vertical;
+                .link{
+                    margin: $xsmall-space 0;
                 }
             }
         }

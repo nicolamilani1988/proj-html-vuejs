@@ -78,13 +78,17 @@
 #home-page header .container nav .list-item {
   margin: 0 20px;
   color: #3C4858;
+  position: relative;
 }
-#home-page header .container nav .list-item:hover {
+#home-page header .container nav .list-item:hover > a {
   color: #2F55D4;
 }
-#home-page header .container nav .list-item:hover i {
+#home-page header .container nav .list-item:hover > a i {
   transition: all 0.5s ease;
   transform: rotate(180deg);
+}
+#home-page header .container nav .list-item:hover > .dropdown-menu {
+  visibility: visible;
 }
 #home-page header .container .actions .icon {
   padding: 5px;
@@ -108,6 +112,34 @@
 }
 #home-page header .container .actions .icon.tool:hover i {
   color: #F8F9FC;
+}
+#home-page header .dropdown-menu {
+  position: absolute;
+  top: 50px;
+  min-width: 100%;
+  border-radius: 10px;
+  border: 1.5px solid #E9ECEF;
+  padding: 20px;
+  display: flex;
+  background-color: white;
+  visibility: hidden;
+}
+#home-page header .dropdown-menu.multiple-columns {
+  border: 1px solid green;
+  right: calc(-1140px / 2);
+  width: 1140px;
+  justify-content: space-between;
+}
+#home-page header .dropdown-menu.single-column {
+  border: 1px solid red;
+  width: 250px;
+}
+#home-page header .dropdown-menu ul {
+  display: flex;
+  flex-direction: column;
+}
+#home-page header .dropdown-menu ul .link {
+  margin: 10px 0;
 }
 #home-page #jumbotron {
   background-color: #F8F9FC;
