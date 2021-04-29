@@ -1,5 +1,5 @@
 #home-page{
-    
+
     .container{
         @include standard-container;
     }
@@ -320,12 +320,16 @@
                 h1{
                     margin-top: $small-space;
                 }
-                .details,ul,.squared-button {
+                .details,ul,.squared-button-container {
                     margin: $small-space 0;
                 }
                 li{
                     margin: $xsmall-space 0;
                     color: $mouse-grey;
+                }
+                button{
+                    width: 100%;
+                    text-align: center;
                 }
                 .ribbon{
                     @include ribbon;

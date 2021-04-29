@@ -332,12 +332,16 @@
 #home-page main #rates .card h1 {
   margin-top: 20px;
 }
-#home-page main #rates .card .details, #home-page main #rates .card ul, #home-page main #rates .card .squared-button {
+#home-page main #rates .card .details, #home-page main #rates .card ul, #home-page main #rates .card .squared-button-container {
   margin: 20px 0;
 }
 #home-page main #rates .card li {
   margin: 10px 0;
   color: #4F5A69;
+}
+#home-page main #rates .card button {
+  width: 100%;
+  text-align: center;
 }
 #home-page main #rates .card .ribbon {
   width: 75px;
