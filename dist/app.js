@@ -107,16 +107,24 @@ function init() {
     },
     methods: {
       getImg: function getImg(logo, format) {
+        //select image
         var path = 'img/' + logo + '.' + format;
         return path;
       },
       updateScroll: function updateScroll() {
+        //change header color on scroll
         this.scrollPosition = window.scrollY;
       },
+      showMenu: function showMenu(index) {
+        //show dropdown-menu
+        this.activeMenu = index;
+      },
       selectItem: function selectItem(item) {
+        //change active item in Quickstart section
         this.activeStartItem = item['name'];
       },
       scrollTop: function scrollTop() {
+        //scroll to Top page
         var clock = setInterval(function () {
           if (window.pageYOffset === 0) {
             clearInterval(clock);
@@ -124,9 +132,6 @@ function init() {
 
           window.scrollTo(0, window.pageYOffset - 50);
         }, 20);
-      },
-      showMenu: function showMenu(index) {
-        this.activeMenu = index;
       }
     },
     mounted: function mounted() {

@@ -147,17 +147,20 @@ function init(){
         }, 
 
         methods:{
-            getImg: function(logo, format){
+            getImg: function(logo, format){ //select image
                 const path = 'img/'+logo+'.' + format;
                 return path;
             },
-            updateScroll() {
+            updateScroll() { //change header color on scroll
                 this.scrollPosition = window.scrollY;
             },
-            selectItem: function(item){
+            showMenu: function(index){  //show dropdown-menu
+                this.activeMenu = index;
+            },
+            selectItem: function(item){ //change active item in Quickstart section
                 this.activeStartItem = item['name'];
             },
-            scrollTop: function(){
+            scrollTop: function(){ //scroll to Top page
                 let clock = setInterval(() =>{
                     if(window.pageYOffset === 0){
                         clearInterval(clock);
@@ -165,14 +168,11 @@ function init(){
                     window.scrollTo(0, window.pageYOffset - 50);
                 }, 20)            
             },
-            showMenu: function(index){
-                this.activeMenu = index;
-            },
         },
+
         mounted() {
             window.addEventListener('scroll', this.updateScroll);
         }
-          
             
     })   
 }
