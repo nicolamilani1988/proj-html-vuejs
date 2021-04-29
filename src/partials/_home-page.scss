@@ -490,7 +490,7 @@
     .show{
         display: block;
     }
-    
+
     .modal{
         z-index: 998;
         position: fixed;
@@ -542,6 +542,28 @@
                 }
             }
         }
+    }
+
+    .change-color{
+        cursor: pointer;
+        padding: $xxsmall-space;
+        text-align: right;
+        width: 100px;
+        height: 50px;
+        border: 1.5px solid $border-light-gray;
+        border-radius: 40px;
+        position: fixed;
+        top:200px;
+        left: -40px;
+        z-index: 999;
+        background-color: white;
+        i{
+            animation: loading 2s linear infinite;
+        }
+        @keyframes loading{
+            0% {transform:rotate(0);}
+            100% {transform:rotate(-1turn);}
+          }
     }
         
 }

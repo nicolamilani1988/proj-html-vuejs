@@ -605,6 +605,40 @@
   top: 0;
   cursor: pointer;
 }
+#home-page .change-color {
+  cursor: pointer;
+  padding: 5px;
+  text-align: right;
+  width: 100px;
+  height: 50px;
+  border: 1.5px solid #E9ECEF;
+  border-radius: 40px;
+  position: fixed;
+  top: 200px;
+  left: -40px;
+  z-index: 999;
+  background-color: white;
+}
+#home-page .change-color i {
+  -webkit-animation: loading 2s linear infinite;
+          animation: loading 2s linear infinite;
+}
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-1turn);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-1turn);
+  }
+}
 
 * {
   box-sizing: border-box;
