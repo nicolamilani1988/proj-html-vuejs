@@ -28,6 +28,7 @@ function init() {
       }],
       activeMenu: null,
       isSearchbarVisible: false,
+      isModalVisible: false,
       partners: ['amazon', 'google', 'lenovo', 'paypal', 'shopify', 'spotify'],
       cards: [{
         "class": "fas fa-layer-group",

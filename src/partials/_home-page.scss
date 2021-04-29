@@ -53,7 +53,7 @@
     // HEADER
     header{
         transition: $standard-transition;
-        z-index: 999;
+        z-index: 899;
         padding: $small-space 0;
         background-color: $lighter-grey;
         border-bottom: 1.5px solid $lighter-grey;
@@ -340,7 +340,7 @@
             }
         }
         #join-us{
-            .email-form{
+            .email-input{
                 display: flex;
                 justify-content: space-between;
                 border-radius: 20px;
@@ -415,9 +415,8 @@
                        margin: $xsmall-space 0 $xxsmall-space;
                    }
                    .email-form{
-                       padding: $xsmall-space $small-space;
+                       @include email-form;
                        background-color: $night-blue;
-                       border-radius: 5px;
                        border: 1.5px solid $night-blue;
                        &:hover{
                         border: 1.5px solid $dark-blue;
@@ -490,6 +489,59 @@
     }
     .show{
         display: block;
+    }
+    
+    .modal{
+        z-index: 998;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        .mini-container{
+            @include absolute-center;
+            display: flex;
+            width: 800px;
+            border-radius: 10px;
+            background-color: white;
+            img{
+                height: 100%;
+                border-radius: 10px;
+            }
+            .inputs{
+                @include flex-vertical;
+                justify-content: center;
+                border-radius: 10px;
+                padding: $small-space;
+                width: 50%;
+                position: relative;
+                >*{
+                    padding: $xsmall-space 0;
+                }
+                .input-form{
+                    @include email-form;
+                    border: 1.5px solid $bordered-lightgray-buttons;
+                }
+                .check-help{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                button{
+                    width: 100%;
+                }
+                .sign-up{
+                    text-align: center;
+                }
+                .close{
+                    color: $standard-text-grey;
+                    position: absolute;
+                    right: $small-space;
+                    top: 0;
+                    cursor: pointer;
+                }
+            }
+        }
     }
         
 }

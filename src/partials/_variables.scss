@@ -183,3 +183,9 @@ $standard-transition: all 0.5s ease;
         }
     }        
 }
+
+@mixin email-form{
+    padding: $xsmall-space $small-space;
+    border-radius: 5px;
+
+}

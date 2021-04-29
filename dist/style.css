@@ -58,7 +58,7 @@
 }
 #home-page header {
   transition: all 0.5s ease;
-  z-index: 999;
+  z-index: 899;
   padding: 20px 0;
   background-color: #F8F9FC;
   border-bottom: 1.5px solid #F8F9FC;
@@ -385,29 +385,29 @@
   box-shadow: 0 5px 13px rgba(60, 72, 88, 0.2);
   border-bottom: 3px solid #2F55D4;
 }
-#home-page main #join-us .email-form {
+#home-page main #join-us .email-input {
   display: flex;
   justify-content: space-between;
   border-radius: 20px;
   border: 1.5px solid #E9ECEF;
 }
-#home-page main #join-us .email-form input, #home-page main #join-us .email-form button {
+#home-page main #join-us .email-input input, #home-page main #join-us .email-input button {
   font-size: 1.1rem;
 }
-#home-page main #join-us .email-form input {
+#home-page main #join-us .email-input input {
   padding: 10px 20px;
   margin-left: 10px;
 }
-#home-page main #join-us .email-form input::-moz-placeholder {
+#home-page main #join-us .email-input input::-moz-placeholder {
   color: gray;
 }
-#home-page main #join-us .email-form input:-ms-input-placeholder {
+#home-page main #join-us .email-input input:-ms-input-placeholder {
   color: gray;
 }
-#home-page main #join-us .email-form input::placeholder {
+#home-page main #join-us .email-input input::placeholder {
   color: gray;
 }
-#home-page main #join-us .email-form button {
+#home-page main #join-us .email-input button {
   border-radius: 20px;
 }
 #home-page footer {
@@ -472,8 +472,8 @@
 }
 #home-page footer #infos .container .medium.newsletter .email-form {
   padding: 10px 20px;
-  background-color: #27314f;
   border-radius: 5px;
+  background-color: #27314f;
   border: 1.5px solid #27314f;
 }
 #home-page footer #infos .container .medium.newsletter .email-form:hover {
@@ -548,6 +548,63 @@
 #home-page .show {
   display: block;
 }
+#home-page .modal {
+  z-index: 998;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#home-page .modal .mini-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 800px;
+  border-radius: 10px;
+  background-color: white;
+}
+#home-page .modal .mini-container img {
+  height: 100%;
+  border-radius: 10px;
+}
+#home-page .modal .mini-container .inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 20px;
+  width: 50%;
+  position: relative;
+}
+#home-page .modal .mini-container .inputs > * {
+  padding: 10px 0;
+}
+#home-page .modal .mini-container .inputs .input-form {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1.5px solid #2F55D41A;
+}
+#home-page .modal .mini-container .inputs .check-help {
+  display: flex;
+  justify-content: space-between;
+}
+#home-page .modal .mini-container .inputs button {
+  width: 100%;
+}
+#home-page .modal .mini-container .inputs .sign-up {
+  text-align: center;
+}
+#home-page .modal .mini-container .inputs .close {
+  color: #8492A6;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  cursor: pointer;
+}
 
 * {
   box-sizing: border-box;
@@ -604,6 +661,9 @@ body .green-text {
 }
 body .red-text {
   color: red;
+}
+body .black-text {
+  color: black;
 }
 body div.separation-line {
   border-top: 1.5px solid #E9ECEF;
