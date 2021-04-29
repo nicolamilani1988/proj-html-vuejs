@@ -33,9 +33,9 @@
                 <nav>
                     <ul>
                         <li class="list-item thin-text"><a href=""><strong>HOME</strong></a></li>
-                        <li class="list-item thin-text" v-for="item in menuItems">
-                            <a href=""><strong>{{item['name']}}<i class="fas fa-chevron-down"></i></strong></a>
-                            <div :class="item['class']" class="dropdown-menu">
+                        <li class="list-item thin-text" v-for="(item,index) in menuItems">
+                            <a href=""><strong @mouseenter="showMenu(index)">{{item['name']}}<i class="fas fa-chevron-down"></i></strong></a>
+                            <div :class="item['class']" class="dropdown-menu" v-if="isMenuVisible == true">
                                 <ul class="small-text" v-for="column in item['columns']">
                                     <li class="link" v-for="(link,index) in column">
                                         <strong><a href="">{{column[index]}}</a></strong>

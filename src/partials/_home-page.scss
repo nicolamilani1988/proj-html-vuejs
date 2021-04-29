@@ -81,10 +81,6 @@
                                 transform: rotate(180deg);
                             }
                         }
-                        >.dropdown-menu{
-                            visibility: visible;
-                        }
-                            
                     }
                 }
             }
@@ -112,7 +108,6 @@
             @include card-style;
             display: flex;
             background-color: white;
-            visibility: hidden;
             &.multiple-columns{
                 border: 1px solid green;
                 right: calc(-1140px / 2);

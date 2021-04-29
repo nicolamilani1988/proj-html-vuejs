@@ -21,8 +21,11 @@ function init(){
                             'FINANCE','VIDEO CONFERENCE','IT SOLUTION TWO','FREELANCE','BLOCKCHAIN','CRYPTOCURRENCY TWO','INTEGRATION','TASK MANAGEMENT','EMAIL INBOX','TRAVEL','BLOG'
                         ],
                         [
-                            'SAAS','CLASSIC SAAS','AGENCY','APPLICATION','CLASSIC APPLICATION','STUDIO','MARKETING','ENTERPRISE','SERVICE','PAYMENTS','CRYPTOCURRENCY'
+                            'LANDING ONE','LANDING TWO','LANDING THREE','LANDING FOUR','SHOP','INSURANCE','ONLINE LEARNING','PERSONAL','COWORKING','COURSE','FORUM'
                         ],
+                        [
+                            'EVENT','PRODUCT','PORTFOLIO','JOB','SOCIAL MEDIA','DIGITAL AGENCY','CAR RIDE','CUSTOMER','SOFTWARE','E-BOOK','SAAS'
+                        ]
                     ]
                 },
                 {
@@ -30,13 +33,23 @@ function init(){
                     class: 'single-column',
                     columns:[
                         [
-                            'SAAS','CLASSIC SAAS','AGENCY','APPLICATION','CLASSIC APPLICATION','STUDIO','MARKETING','ENTERPRISE','SERVICE','PAYMENTS','CRYPTOCURRENCY'
+                            'COMPANY','ACCOUNT','SHOP','HELP CENTER','FORUMS','EMAIL-TEMPLATE','CAREERS','BLOG','CASE-STUDY','PORTFOLIO','AUTH-PAGES','UTILITY','SPECIAL','CONTACTS'
+                        ],
+                    ]
+                },
+                {
+                    name:'DOCS',
+                    class: 'single-column',
+                    columns:[
+                        [
+                            'DOCUMENTATION','CHANGELOG','COMPONENTS','WIDGET'
                         ],
                     ]
                 },
 
+
             ],
-            //menuItems:['LANDING','PAGES','DOCS'],
+            isMenuVisible: false,
             
             partners:['amazon','google','lenovo','paypal','shopify','spotify'],
             cards:[
